@@ -1,11 +1,11 @@
 {
-  "name": "Portfolio Jefferson",
+  "name": "Portfolio-Jefferson",
   "private": true,
   "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/Portfolio Jefferson/",
+    "build": "vite build --base=/Portfolio-Jefferson/",
     "preview": "vite preview"
   },
   "devDependencies": {
