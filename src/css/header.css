@@ -27,7 +27,7 @@
 
 .burger-icon {
     display: block;
-    fill: #FAFAFA;
+    stroke: #FAFAFA;
 }
 
 .order-nav {
@@ -270,4 +270,8 @@
 .order-nav-mobile:hover,
 .order-nav-mobile:focus {
     background-color: #E0373F;
+}
+
+.modal-close-icon {
+  stroke: #FAFAFA;
 }
