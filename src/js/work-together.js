@@ -3,6 +3,9 @@ import Swal from 'sweetalert2';
 
 const form = document.querySelector('.js-form');
 
+const as = document.querySelector('.connect__background').currentSrc;
+console.log(as);
+
 const elements = {
   emailInput: form.querySelector('.js-email'),
   commentInput: form.querySelector('.js-comment'),
