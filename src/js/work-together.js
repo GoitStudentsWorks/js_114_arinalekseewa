@@ -1,64 +1,152 @@
 import axios from 'axios';
+import Swal from 'sweetalert2';
 
 const form = document.querySelector('.js-form');
-const modal = document.querySelector('.js-modal');
-const modalContent = document.querySelector('.js-modal-content');
-const button = document.querySelector('.js-button-modal-close');
+
+const elements = {
+  emailInput: form.querySelector('.js-email'),
+  commentInput: form.querySelector('.js-comment'),
+  emailError: form.querySelector('.js-email-error'),
+  commentError: form.querySelector('.js-comment-error'),
+};
 
 form.addEventListener('submit', handleFormSubmit);
-button.addEventListener('click', hideModal);
-modal.addEventListener('click', closeModalOnBackdrop);
-document.addEventListener('keydown', handleEscapeKey);
 
 async function handleFormSubmit(event) {
   event.preventDefault();
+  clearValidationErrors();
+
   const formData = new FormData(form);
+  const email = formData.get('email')?.trim();
+  const comment = formData.get('comment')?.trim();
 
-  const data = {
-    email: formData.get('email').trim(),
-    comment: formData.get('comment'.trim()),
-  };
-
-  if (!data.email || !data.comment) {
-    alert('Будь ласка, заповніть всі поля форми.');
-    return;
-  }
+  if (!validateForm(email, comment)) return;
 
   try {
-    if (Object.keys(data).length > 0) {
-      await axios.post('https://portfolio-js.b.goit.study/api/requests', data);
+    showModalLoading();
 
-      showModal();
-      form.reset();
-    }
+    const { data } = await axios.post(
+      'https://portfolio-js.b.goit.study/api/requests',
+      { email, comment }
+    );
+
+    Swal.close();
+    showModalSuccess(data.title, data.message);
+    form.reset();
   } catch (error) {
-    console.error('Помилка надсилання форми:', error);
-    alert('Сталася помилка при надсиланні. Спробуйте ще раз.');
+    Swal.close();
+    console.error('Form submission error:', error);
+
+    if (!navigator.onLine) {
+      showModalNoConnection();
+      return;
+    }
+
+    const message =
+      error.response?.data?.message ||
+      'Something went wrong. Please try again later.';
+
+    showModalError(message);
   }
 }
 
-function showModal() {
-  modal.classList.add('modal-is-open');
-  modalContent.classList.add('modal-content-is-open');
+function validateForm(email, comment) {
+  let isValid = true;
+  const { emailInput, commentInput, emailError, commentError } = elements;
 
-  setTimeout(() => {
-    hideModal();
-  }, 3000);
-}
+  const emailPattern =
+    /^[a-zA-Z0-9._%+-]+@([a-zA-Z0-9-]+\.)+(com|net|org|ua|gov|edu)$/;
 
-function hideModal() {
-  modal.classList.remove('modal-is-open');
-  modalContent.classList.remove('modal-content-is-open');
-}
-
-function closeModalOnBackdrop(event) {
-  if (event.target === modal) {
-    hideModal();
+  if (!email) {
+    showValidationError(emailError, emailInput, 'Email is required.');
+    isValid = false;
+  } else if (!emailPattern.test(email)) {
+    showValidationError(
+      emailError,
+      emailInput,
+      'Please enter a valid email address.'
+    );
+    isValid = false;
   }
+
+  if (!comment) {
+    showValidationError(commentError, commentInput, 'Comment is required.');
+    isValid = false;
+  }
+
+  return isValid;
 }
 
-function handleEscapeKey(event) {
-  if (event.key === 'Escape') {
-    hideModal();
-  }
+function showValidationError(errorElement, inputElement, message) {
+  errorElement.textContent = message;
+  inputElement.classList.add('connect__input--invalid');
+}
+
+function clearValidationErrors() {
+  const { emailInput, commentInput, emailError, commentError } = elements;
+
+  emailError.textContent = '';
+  commentError.textContent = '';
+  emailInput.classList.remove('connect__input--invalid');
+  commentInput.classList.remove('connect__input--invalid');
+}
+
+function showModalSuccess(title, message) {
+  Swal.fire({
+    icon: 'success',
+    title,
+    text: message,
+    background: '#1c1d20',
+    color: 'white',
+    customClass: {
+      popup: 'custom-popup',
+      title: 'custom-title',
+      htmlContainer: 'custom-text',
+      confirmButton: 'custom-button',
+    },
+  });
+}
+
+function showModalError(message) {
+  Swal.fire({
+    icon: 'error',
+    title: 'Oops',
+    text: message,
+    background: '#1c1d20',
+    color: 'white',
+    customClass: {
+      confirmButton: 'connect__button-modal',
+    },
+  });
+}
+
+function showModalLoading() {
+  Swal.fire({
+    title: 'Sending...',
+    background: '#1c1d20',
+    color: 'white',
+    allowOutsideClick: false,
+    didOpen: () => Swal.showLoading(),
+    customClass: {
+      popup: 'custom-popup',
+      title: 'custom-title',
+      confirmButton: 'custom-button',
+    },
+  });
+}
+
+function showModalNoConnection() {
+  Swal.fire({
+    icon: 'warning',
+    title: 'No Internet Connection',
+    text: 'Please check your connection and try again.',
+    background: '#1c1d20',
+    color: 'white',
+    customClass: {
+      popup: 'custom-popup',
+      title: 'custom-title',
+      htmlContainer: 'custom-text',
+      confirmButton: 'custom-button',
+    },
+  });
 }

@@ -1,53 +1,45 @@
-<section class="section">
-  <div class="container work-together">
-    <h2 class="work-together-title">
+<section id="work-togetherx " class="connect section">
+  <div class="connect__container container">
+    <h2 class="connect__title">
       <img
-        class="work-together-image"
+        class="connect__icon"
         src="../img/img-icon.webp"
         alt=""
         width="44"
         height="44"
       />
-      Let’s&nbsp;<span class="highlight">work</span>
-      together
+      Let’s <span class="connect__highlight">work</span> together
     </h2>
-    <form class="work-together-form js-form" action="">
-      <input
-        class="work-together-input"
-        type="email"
-        name="email"
-        placeholder="clients@gmail.com"
-        pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
-      />
-      <input
-        class="work-together-input"
-        type="text"
-        name="comment"
-        placeholder="Comments"
-      />
-      <button class="work-together-button" type="submit">Send</button>
+
+    <form class="connect__form js-form" novalidate>
+      <div class="connect__input-wrapper">
+        <input
+          class="connect__input js-email"
+          type="email"
+          name="email"
+          placeholder="your.email@example.com"
+        />
+        <span class="connect__error js-email-error"></span>
+      </div>
+
+      <div class="connect__input-wrapper">
+        <input
+          class="connect__input js-comment"
+          type="text"
+          name="comment"
+          placeholder="Comments"
+          required
+        />
+        <span class="connect__error js-comment-error"></span>
+      </div>
+      <button class="connect__button" type="submit">Send</button>
     </form>
-    <div class="work-together-links-box">
-      <a class="work-together-link" href="mailto:lloydjefferson@gmail.com"
+
+    <div class="connect__links">
+      <a class="connect__link" href="mailto:lloydjefferson@gmail.com"
         >lloydjefferson@gmail.com</a
       >
-      <a class="work-together-link" href="tel:+3801111111111"
-        >+380 11 1111 11 11</a
-      >
-    </div>
-    <div class="modal js-modal">
-      <div class="modal-content js-modal-content">
-        <button type="button" class="close js-button-modal-close">
-          <svg class="modal-svg" width="22" height="22">
-            <use href="../img/sprite.svg#icon-close"></use>
-          </svg>
-        </button>
-        <p class="modal-title">Thank you for your interest in cooperation!</p>
-        <p class="modal-text">
-          The manager will contact you shortly to discuss further details and
-          opportunities for cooperation. Please stay in touch.
-        </p>
-      </div>
+      <a class="connect__link" href="tel:+3801111111111">+380 11 1111 11 11</a>
     </div>
   </div>
 </section>
