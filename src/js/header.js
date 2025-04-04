@@ -8,6 +8,7 @@ openNavBtn.addEventListener('click', toggleNav);
 
 openModalBtn.addEventListener("click", openModal);
 closeModalBtn.addEventListener("click", closeModal);
+
 modal.addEventListener("click", (event) => {
     if (event.target === modal) {
         closeModal();
