@@ -1,24 +1,39 @@
-.visually-hidden {
-    display: none;
+
+.section {
+  width: 100%;
+  height: 100%;
 }
 
+
 .about-me-flex {
-    width: 1376px;
-    height: 700px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 1376px;
+  height: 796px;
+  margin: 0 auto;
+  padding-top: 96px;
 }
-   
-.about-me-text {
-  padding: 32px 32px 272px 32px;
-  background-color: #242527;
-  text-transform: uppercase;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 1.17;
-  letter-spacing: -0.03em;
+
+.card-of-text {
+  padding-top: 64px;
+  padding-left: 64px;
+  width: 680px; 
+  height: 700px;
   border-radius: 24px;
-  margin-bottom: 16px;
+  background-color: #242527;
+}
+
+.about-me-text {
   width: 552px;
   height: 200px;
+  color: #fafafa;
+  font-weight: 500;
+  font-size: 38px;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+
 }
 
 .about-me-red {
@@ -28,3 +43,92 @@
 .about-me-grey {
   color: rgba(250, 250, 250, 0.4);
 }
+
+.about-me-img {
+  width: 680px; 
+  height: 700px;
+  border-radius: 24px;
+  margin-left: 16px;
+  display: block;
+  max-width: 100%;
+  text-align: center;
+}
+
+.about-me-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  border-radius: 24px;
+}
+
+  /* @media screen  and (min-width: 768px) {
+  .section {
+    width: 100%;
+    height: 100%;
+  }
+
+  .about-me-flex {
+    display: block;
+    justify-content:center;
+    text-align: center;        
+    width: 704px;
+    margin: 0 auto;
+    padding-top: 64px;
+  }
+
+  .card-of-text {
+    width: 704px;
+    height: 700px;     
+  }
+
+  .about-me-text {
+    width: 576px;
+    height: 200px;
+  }
+
+  .about-me-img {
+    width: 100%; 
+    height: 700px;
+    margin-left: 16px;
+    max-width: 100%;
+    text-align: center;
+  }
+}
+
+ @media screen  and (min-width: 375px) {
+    .section {
+      width: 100%;
+      height: 100%;
+  }
+
+  .about-me-flex {
+    display: block;
+    justify-content:center;
+    text-align: center;      
+    width: 343px;
+    margin: 0 auto;
+  }
+
+  .card-of-text {
+    padding-top: 32px;
+    padding-left: 32px;
+    width: 343px;
+    height: 500px;     
+  }
+
+  .about-me-text {
+    width: 279px; 
+    height: 196px;
+    font-size: 24px;
+    line-height: 1.16; 
+  }
+
+   .about-me-img {
+    width: 100%; 
+    height: 700px;
+    margin-left: 16px;
+    max-width: 100%;
+    text-align: center;
+  }
+
+ } */

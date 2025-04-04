@@ -1,26 +1,46 @@
+
 <section class="section" id="about-me">
     <div class="container">
-        <h2 class="visually-hidden">I create impressive and functional websites</h2>
         <div class="about-me-flex">
-        <p class="about-me-text">
-            I work with people all over the world to create impressive and
-            <span class="about-me-red">functional</span>
-            <span class="about-me-grey">websites</span>
-            that reflect each client's unique personality.
-
-        </p>
-        <picture class="about-me-img">
-            <!-- для десктопа -->
-                    <!-- <source srcset="
-             /> -->
-             <!-- для планшета -->
-                    <!-- <source srcset="
-             /> -->
-             <!-- для мобілки -->
-                    <!-- <source srcset="
-             /> -->
-        </picture>
+            <div class="card-of-text">
+                <p class="about-me-text">
+                    I work with people all over the world to create impressive and
+                    <span class="about-me-red">functional</span>
+                    <span class="about-me-grey">websites</span>
+                    that reflect each client's unique personality.
+                </p>
+            </div>
+            <picture class="about-me-img">
+                <source
+                    srcset="
+                    ../img/about-me-deck-1x.webp 1x,
+                    ../img/about-me-deck-2x.webp 2x
+                    "
+                    media="(min-width:1440px)"
+                    type="image/webp"
+                />
+                <img
+                    src="/img/about-me-deck-1x.webp"
+                    alt="About-me"
+                />
+                 <source
+                    srcset="
+                    ../img/about-me-tablet-1x.webp 1x,
+                    ../img/about-me-tablet-2x.webp 2x
+                    "
+                    media="(min-width:768px)"
+                    type="image/webp"
+                />
+               
+                <source
+                    srcset="
+                    ../img/about-me-mobil-1x.webp 1x,
+                    ../img/about-me-mobil-2x.webp 2x
+                    "
+                    media="(min-width:320px)"
+                    type="image/webp"
+                />
+            </picture>
         </div>
     </div>
-
 </section>
