@@ -3,17 +3,34 @@ import Swal from 'sweetalert2';
 
 const form = document.querySelector('.js-form');
 
-const as = document.querySelector('.connect__background').currentSrc;
-console.log(as);
-
 const elements = {
   emailInput: form.querySelector('.js-email'),
   commentInput: form.querySelector('.js-comment'),
   emailError: form.querySelector('.js-email-error'),
   commentError: form.querySelector('.js-comment-error'),
+  submitButton: form.querySelector('.connect__button'),
 };
 
+const { emailInput, commentInput, emailError, commentError, submitButton } =
+  elements;
+
+// ===================== EVENT LISTENERS =====================
+
 form.addEventListener('submit', handleFormSubmit);
+
+emailInput.addEventListener('input', () => {
+  validateField('email', emailInput, emailError);
+  toggleSubmitButton();
+});
+
+commentInput.addEventListener('input', () => {
+  validateField('comment', commentInput, commentError);
+  toggleSubmitButton();
+});
+
+toggleSubmitButton(); // одразу блокуємо кнопку при завантаженні
+
+// ===================== FORM SUBMIT =====================
 
 async function handleFormSubmit(event) {
   event.preventDefault();
@@ -23,7 +40,10 @@ async function handleFormSubmit(event) {
   const email = formData.get('email')?.trim();
   const comment = formData.get('comment')?.trim();
 
-  if (!validateForm(email, comment)) return;
+  const isValidEmail = validateField('email', emailInput, emailError);
+  const isValidComment = validateField('comment', commentInput, commentError);
+
+  if (!isValidEmail || !isValidComment) return;
 
   try {
     showModalLoading();
@@ -36,6 +56,8 @@ async function handleFormSubmit(event) {
     Swal.close();
     showModalSuccess(data.title, data.message);
     form.reset();
+    clearValidationErrors();
+    toggleSubmitButton();
   } catch (error) {
     Swal.close();
     console.error('Form submission error:', error);
@@ -53,46 +75,67 @@ async function handleFormSubmit(event) {
   }
 }
 
-function validateForm(email, comment) {
-  let isValid = true;
-  const { emailInput, commentInput, emailError, commentError } = elements;
+// ===================== VALIDATION =====================
 
+function validateField(type, inputElement, errorElement, showMessage = true) {
+  const value = inputElement.value.trim();
   const emailPattern =
     /^[a-zA-Z0-9._%+-]+@([a-zA-Z0-9-]+\.)+(com|net|org|ua|gov|edu)$/;
 
-  if (!email) {
-    showValidationError(emailError, emailInput, 'Email is required.');
-    isValid = false;
-  } else if (!emailPattern.test(email)) {
-    showValidationError(
-      emailError,
-      emailInput,
-      'Please enter a valid email address.'
-    );
-    isValid = false;
+  if (!value) {
+    if (showMessage) {
+      errorElement.textContent =
+        type === 'email' ? 'Email is required.' : 'Comment is required.';
+      errorElement.style.color = '#ff6b6b';
+      inputElement.classList.add('connect__input--invalid');
+    }
+    return false;
   }
 
-  if (!comment) {
-    showValidationError(commentError, commentInput, 'Comment is required.');
-    isValid = false;
+  if (type === 'email' && !emailPattern.test(value)) {
+    if (showMessage) {
+      errorElement.textContent = 'Please enter a valid email address.';
+      errorElement.style.color = '#ff6b6b';
+      inputElement.classList.add('connect__input--invalid');
+    }
+    return false;
   }
 
-  return isValid;
-}
+  if (showMessage) {
+    if (type === 'email') {
+      errorElement.textContent = '✓ Email looks good.';
+      errorElement.style.color = '#00ff99';
+    } else {
+      errorElement.textContent = '';
+    }
+    inputElement.classList.remove('connect__input--invalid');
+  }
 
-function showValidationError(errorElement, inputElement, message) {
-  errorElement.textContent = message;
-  inputElement.classList.add('connect__input--invalid');
+  return true;
 }
 
 function clearValidationErrors() {
-  const { emailInput, commentInput, emailError, commentError } = elements;
-
   emailError.textContent = '';
   commentError.textContent = '';
+  emailError.style.color = '#ff6b6b';
+  commentError.style.color = '#ff6b6b';
+
   emailInput.classList.remove('connect__input--invalid');
   commentInput.classList.remove('connect__input--invalid');
 }
+
+function toggleSubmitButton() {
+  const isValidEmail = validateField('email', emailInput, emailError, false);
+  const isValidComment = validateField(
+    'comment',
+    commentInput,
+    commentError,
+    false
+  );
+  submitButton.disabled = !(isValidEmail && isValidComment);
+}
+
+// ===================== MODALS =====================
 
 function showModalSuccess(title, message) {
   Swal.fire({
