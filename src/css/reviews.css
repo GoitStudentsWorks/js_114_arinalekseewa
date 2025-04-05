@@ -110,10 +110,14 @@
   display: none;
 }
 .swiper-button-prev-icon {
+  stroke: #fafafa;
+
   width: 24px;
   height: 24px;
 }
 .swiper-button-next-icon {
+    transform: rotate(180deg);
+  stroke: #fafafa;
   width: 24px;
   height: 24px;
 }
