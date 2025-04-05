@@ -56,7 +56,10 @@ async function handleFormSubmit(event) {
   const isValidEmail = validateField('email', emailInput, emailError);
   const isValidComment = validateField('comment', commentInput, commentError);
 
-  if (!isValidEmail || !isValidComment) return;
+  if (!isValidEmail || !isValidComment) {
+    showModalWarning();
+    return;
+  }
 
   try {
     showModalLoading();
@@ -145,7 +148,10 @@ function toggleSubmitButton() {
     commentError,
     false
   );
-  submitButton.disabled = !(isValidEmail && isValidComment);
+  submitButton.classList.toggle(
+    'is-disabled',
+    !(isValidEmail && isValidComment)
+  );
 }
 
 // ===================== MODALS =====================
@@ -189,6 +195,21 @@ function showModalLoading() {
     customClass: {
       popup: 'custom-popup',
       title: 'custom-title',
+      confirmButton: 'custom-button',
+    },
+  });
+}
+function showModalWarning() {
+  Swal.fire({
+    icon: 'warning',
+    title: 'Incomplete Fields',
+    text: 'Please fill in all required fields.',
+    background: '#1c1d20',
+    color: 'white',
+    customClass: {
+      popup: 'custom-popup',
+      title: 'custom-title',
+      htmlContainer: 'custom-text',
       confirmButton: 'custom-button',
     },
   });
