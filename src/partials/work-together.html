@@ -1,4 +1,4 @@
-<section class="connect section" id="work-together ">
+<section class="connect section" id="work-together">
   <picture class="connect__picture">
     <!-- Desktop -->
     <source
@@ -37,9 +37,12 @@
           class="connect__input js-email"
           type="email"
           name="email"
+          id="email"
           placeholder="your.email@example.com"
           aria-label="Email address"
         />
+        <label for="email" class="connect__label">Email</label>
+        <span class="connect__underline"></span>
         <span class="connect__error js-email-error"></span>
       </div>
 
@@ -48,10 +51,13 @@
           class="connect__input js-comment"
           type="text"
           name="comment"
-          placeholder="Comments"
+          id="comment"
+          placeholder=""
           aria-label="Your comment"
           required
         />
+        <label for="comment" class="connect__label">Message</label>
+        <span class="connect__underline"></span>
         <span class="connect__error js-comment-error"></span>
       </div>
       <button class="connect__button" type="submit">Send</button>

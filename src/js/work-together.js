@@ -180,19 +180,26 @@ function showModalLoading() {
     },
   });
 }
+document.addEventListener('DOMContentLoaded', () => {
+  const triggerElement = document.querySelector('.connect__title');
+  const section = document.querySelector('.connect');
 
-function showModalNoConnection() {
-  Swal.fire({
-    icon: 'warning',
-    title: 'No Internet Connection',
-    text: 'Please check your connection and try again.',
-    background: '#1c1d20',
-    color: 'white',
-    customClass: {
-      popup: 'custom-popup',
-      title: 'custom-title',
-      htmlContainer: 'custom-text',
-      confirmButton: 'custom-button',
+  if (!triggerElement || !section) return;
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          section.classList.add('connect--visible');
+        } else {
+          section.classList.remove('connect--visible'); // прибираємо коли заголовок зникає
+        }
+      });
     },
-  });
-}
+    {
+      threshold: 0.8, // реагує коли 50% заголовка в полі зору
+    }
+  );
+
+  observer.observe(triggerElement);
+});

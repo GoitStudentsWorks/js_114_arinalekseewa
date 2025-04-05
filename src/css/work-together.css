@@ -4,6 +4,14 @@
   z-index: 1;
   padding: 32px 0;
   background-color: transparent;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.connect--visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .connect__picture {
@@ -118,19 +126,61 @@
   position: relative;
 }
 
-.connect__input {
-  align-items: center;
+.connect__input-wrapper {
+  position: relative;
   width: 100%;
-  font-size: 17px;
-  letter-spacing: -0.01em;
-  color: rgba(255, 255, 255, 0.85);
-  background-color: transparent;
-  border: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: 32px;
+}
+
+.connect__input {
+  width: 100%;
   padding-bottom: 20px;
-  transition: border-color 0.3s ease, color 0.3s ease;
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  background: transparent;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.4);
+  transition: all 0.3s ease;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.connect__input:focus {
+  outline: none;
+}
+
+.connect__label {
+  position: absolute;
+  left: 0;
+  top: 0px;
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  pointer-events: none;
+  transition: 0.3s ease all;
+}
+
+.connect__input:focus ~ .connect__label,
+.connect__input:not(:placeholder-shown) ~ .connect__label {
+  top: -20px;
+  font-size: 13px;
+  color: #707070;
+}
+
+.connect__underline {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #838691;
+  transition: 0.4s ease;
+  transform: translateX(-50%);
+}
+
+.connect__input:focus ~ .connect__underline,
+.connect__input:hover ~ .connect__underline {
+  width: 100%;
 }
 
 .connect__input--invalid {
@@ -140,7 +190,7 @@
 
 .connect__error {
   position: absolute;
-  bottom: 0;
+  bottom: -20px;
   left: 0;
   font-size: 12px;
   color: #ff6b6b;
@@ -153,14 +203,15 @@
 }
 
 .connect__input::placeholder {
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.356);
   transition: color 0.3s ease;
+  padding-left: 45px;
 }
 
 .connect__input:focus {
   outline: none;
   border-bottom: 1px solid #ffffff;
-  color: rgba(255, 255, 255, 1);
+  color: rgba(201, 201, 201, 0.781);
 }
 
 .connect__input:focus::placeholder {
@@ -190,6 +241,7 @@
   cursor: pointer;
   transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 10px 25px rgba(237, 59, 68, 0.4);
+  max-width: 100%;
 }
 
 .connect__button:disabled {
