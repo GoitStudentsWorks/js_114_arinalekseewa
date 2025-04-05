@@ -1,26 +1,6 @@
-<section class="connect section" id="work-together">
-  <picture class="connect__picture">
-    <!-- Desktop -->
-    <source
-      media="(min-width: 1000px)"
-      srcset="./img/element_desk@1.png 1x, ./img/element_desk@2.png 2x"
-    />
-    <!-- Tablet -->
-    <source
-      media="(min-width: 768px)"
-      srcset="./img/element_tab@1.png 1x, ./img/element_tab@2.png 2x"
-    />
-    <!-- Mobile (default) -->
-    <img
-      class="connect__background"
-      src="img/element_mob@1.png"
-      srcset="./img/element_mob@2.png 2x"
-      alt="background"
-      aria-hidden="true"
-    />
-  </picture>
+<section class="connect section" id="work-together" data-aos="zoom-in-down">
   <div class="connect__container container">
-    <h2 class="connect__title">
+    <h2 class="connect__title" data-aos="fade-up" data-aos-delay="100">
       <img
         class="connect__icon"
         src="./img/img-icon.webp"
@@ -31,8 +11,17 @@
       Let’s &nbsp;<span class="connect__highlight">work</span> together
     </h2>
 
-    <form class="connect__form js-form" novalidate>
-      <div class="connect__input-wrapper">
+    <form
+      class="connect__form js-form"
+      novalidate
+      data-aos="fade-up"
+      data-aos-delay="200"
+    >
+      <div
+        class="connect__input-wrapper"
+        data-aos="fade-up"
+        data-aos-delay="300"
+      >
         <input
           class="connect__input js-email"
           type="email"
@@ -46,7 +35,11 @@
         <span class="connect__error js-email-error"></span>
       </div>
 
-      <div class="connect__input-wrapper">
+      <div
+        class="connect__input-wrapper"
+        data-aos="fade-up"
+        data-aos-delay="300"
+      >
         <input
           class="connect__input js-comment"
           type="text"
@@ -60,10 +53,17 @@
         <span class="connect__underline"></span>
         <span class="connect__error js-comment-error"></span>
       </div>
-      <button class="connect__button" type="submit">Send</button>
+
+      <div
+        class="connect__button-wrapper"
+        data-aos="zoom-in"
+        data-aos-delay="500"
+      >
+        <button class="connect__button" type="submit">Send</button>
+      </div>
     </form>
 
-    <div class="connect__links">
+    <div class="connect__links" data-aos="fade-up" data-aos-delay="600">
       <a class="connect__link" href="mailto:lloydjefferson@gmail.com"
         >lloydjefferson@gmail.com</a
       >

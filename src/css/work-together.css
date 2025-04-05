@@ -2,16 +2,8 @@
   position: relative;
   overflow: hidden;
   z-index: 1;
-  padding: 32px 0;
+  padding: 32px 0 60px 0;
   background-color: transparent;
-  opacity: 0;
-  transform: translateY(100px);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-}
-
-.connect--visible {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 .connect__picture {
@@ -20,12 +12,6 @@
   top: 0;
   right: 0;
   pointer-events: none;
-}
-
-@media only screen and (min-width: 1600px) {
-  .connect__picture {
-    right: 300px;
-  }
 }
 
 @media (min-width: 768px) {
@@ -124,10 +110,6 @@
 
 .connect__input-wrapper {
   position: relative;
-}
-
-.connect__input-wrapper {
-  position: relative;
   width: 100%;
   margin-bottom: 32px;
 }
@@ -136,7 +118,7 @@
   width: 100%;
   padding-bottom: 20px;
   border: none;
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid #4e4e4e;
   background: transparent;
   font-size: 13px;
   color: rgba(255, 255, 255, 0.4);
@@ -169,13 +151,13 @@
 
 .connect__underline {
   position: absolute;
-  left: 50%;
+  left: 0;
   bottom: 0;
   width: 0;
   height: 2px;
-  background-color: #838691;
+  background-color: #ffffff;
   transition: 0.4s ease;
-  transform: translateX(-50%);
+  transform: translateX(-5%, 5%);
 }
 
 .connect__input:focus ~ .connect__underline,
@@ -191,7 +173,7 @@
 .connect__error {
   position: absolute;
   bottom: -20px;
-  left: 0;
+  right: 0;
   font-size: 12px;
   color: #ff6b6b;
 }
@@ -231,7 +213,7 @@
 }
 
 .connect__button {
-  background: linear-gradient(135deg, #ed3b44 0%, #b61616 100%);
+  background: linear-gradient(135deg, #e4575e 0%, #b6161698 100%);
   color: white;
   width: 100px;
   height: 100px;
@@ -239,9 +221,9 @@
   border: none;
   letter-spacing: 0.5px;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 10px 25px rgba(237, 59, 68, 0.4);
   max-width: 100%;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .connect__button:disabled {
@@ -258,14 +240,10 @@
   }
 }
 
-.connect__button:hover {
+.connect__button:hover,
+.connect__button:focus {
   transform: scale(1.06) translateY(-3px);
   box-shadow: 0 14px 30px rgba(237, 59, 68, 0.55);
-}
-
-.connect__button:focus {
-  outline: none;
-  box-shadow: 0 0 0 4px rgba(237, 59, 68, 0.35);
 }
 
 .connect__links {

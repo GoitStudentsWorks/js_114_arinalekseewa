@@ -1,6 +1,19 @@
 import axios from 'axios';
 import Swal from 'sweetalert2';
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+document.addEventListener('DOMContentLoaded', () => {
+  AOS.init({
+    duration: 1200,
+    easing: 'ease-out-cubic',
+    offset: 100,
+    once: false,
+    mirror: true,
+  });
+});
+
 const form = document.querySelector('.js-form');
 
 const elements = {
@@ -180,26 +193,3 @@ function showModalLoading() {
     },
   });
 }
-document.addEventListener('DOMContentLoaded', () => {
-  const triggerElement = document.querySelector('.connect__title');
-  const section = document.querySelector('.connect');
-
-  if (!triggerElement || !section) return;
-
-  const observer = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          section.classList.add('connect--visible');
-        } else {
-          section.classList.remove('connect--visible'); // прибираємо коли заголовок зникає
-        }
-      });
-    },
-    {
-      threshold: 0.8, // реагує коли 50% заголовка в полі зору
-    }
-  );
-
-  observer.observe(triggerElement);
-});
