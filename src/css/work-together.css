@@ -13,6 +13,10 @@
   pointer-events: none;
 }
 
+.connect__container {
+  padding-left: 164px;
+}
+
 @media (min-width: 768px) {
   .connect {
     padding: 48px 0 169px 0;
@@ -21,7 +25,6 @@
 
 @media (min-width: 1440px) {
   .connect {
-    padding-left: 196px;
     padding-top: 86px;
   }
 }
