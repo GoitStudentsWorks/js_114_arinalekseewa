@@ -1,0 +1,175 @@
+
+
+body {
+    
+    font-family: 'Inter', sans-serif;
+            background-image: url('../img/Glass_mob.png'), url('../img/img-hero-mob.webp') ;
+            background-repeat: no-repeat, no-repeat;
+            background-size: 60% 100%;
+            
+}
+.hero {
+    position: relative;
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 20px;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    text-align: left;
+}
+
+.hero-title {
+font-size: 45px;
+letter-spacing: -0.03em;
+line-height: 1;
+    
+}
+
+.hero-footer {
+width:342px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+li {
+    color: #FAFAFA;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 4px;
+}
+
+.social-links a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 37px;
+    height: 37px;
+    border: 1px solid white;
+    border-radius: 50%;
+    color: white;
+    font-size:14px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: white;
+}
+
+.social-links {
+    width: 16px;
+    height: 16px;
+    fill: white;
+    transition: fill 0.3s ease;
+}
+
+.social-links a:hover {
+    fill: black;
+}
+
+.email-link {
+   width:176px;
+
+    padding: 8px 10px;
+    border: 1px solid white;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.email-link:hover {
+    background: white;
+    color: black;
+}
+
+/* Tablet (768px and up) */
+@media (min-width: 768px) {
+    body {
+    
+            background-image: url('../img/Glass_tab.png'), url('../img/img-hero-tab.webp');
+           
+        }
+
+    .hero-title {
+        font-size: 90px;
+       
+    }
+
+    .social-links {
+        gap: 12px;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .social-links a {
+        width: 40px;
+        height: 40px;
+    }
+
+    .social-links svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .email-link {
+        white-space: nowrap;
+        font-size: 1rem;
+        padding: 10px 18px;
+    }
+    .hero-footer{
+        position: absolute;
+        right: 32px;
+        bottom: 32px;
+        display: flex;
+        align-items: center;
+        gap:20px;
+        flex-wrap: nowrap;
+            
+
+    }
+}
+
+/* Desktop (1440px and up) */
+@media (min-width: 1440px) {
+    bodybody {
+    
+            background-image: url('../img/Glass1.png'), url('../img/img-hero-desk.webp');
+          
+        }
+    .hero-title {
+        font-size: 90px;
+    }
+
+    .social-links a {
+        width: 50px;
+        height: 50px;
+    }
+
+    .social-links svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .email-link {
+        font-size: 1.2rem;
+        padding: 12px 24px;
+    }
+}
