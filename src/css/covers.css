@@ -1,10 +1,5 @@
 /* Covers */
 
-body,
-html {
-  overflow-x: hidden;
-}
-
 .covers-section {
   background-image: url(../img/elements.png);
   background-size: cover;

@@ -1,17 +1,6 @@
 @import 'swiper/swiper-bundle.css';
 @import 'izitoast/dist/css/iziToast.css';
 
-.reviews-container{
-  max-width: 375px;
-  margin: 0 auto;
-  padding: 0 16px;
-}
-
-.reviews-section {
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-
 .reviews-swiper.swiper {
   height: 100%;
 }
