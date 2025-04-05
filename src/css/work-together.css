@@ -13,8 +13,10 @@
   pointer-events: none;
 }
 
-.connect__container {
-  padding-left: 164px;
+@media only screen and (min-width: 1440px) {
+  .connect__container {
+    padding-left: 164px;
+  }
 }
 
 @media (min-width: 768px) {
