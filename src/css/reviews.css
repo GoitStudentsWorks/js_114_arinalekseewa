@@ -92,6 +92,40 @@
 .reviews-list-item {
   width: 100%;
 }
+.swiper-button-prev,
+.swiper-button-next {
+  width: 48px;
+  height: 48px;
+  background-color: transparent;
+  border: 1px solid #555;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background-color: #000;
+  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.swiper-button-prev-icon,
+.swiper-button-next-icon {
+  width: 24px;
+  height: 24px;
+  stroke: #ccc;
+  transition: stroke 0.3s ease;
+}
+
+.swiper-button-prev:hover .swiper-button-prev-icon,
+.swiper-button-next:hover .swiper-button-next-icon {
+  stroke: #fff;
+}
+
 .swiper-button-prev.button-prev,
 .swiper-button-next.button-next {
   box-sizing: border-box;
@@ -116,7 +150,7 @@
   height: 24px;
 }
 .swiper-button-next-icon {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
   stroke: #fafafa;
   width: 24px;
   height: 24px;
