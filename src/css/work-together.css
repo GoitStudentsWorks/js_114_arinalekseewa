@@ -1,6 +1,7 @@
 .connect {
   position: relative;
   z-index: 1;
+  padding: 50px 0;
   background-color: transparent;
 }
 
@@ -20,7 +21,7 @@
 
 @media (min-width: 768px) {
   .connect {
-    padding: 48px 0 169px 0;
+    padding-bottom: 169px;
   }
 }
 
