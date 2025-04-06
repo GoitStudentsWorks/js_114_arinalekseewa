@@ -6,7 +6,7 @@
   background-position: center;
   overflow: hidden;
   position: relative;
-  min-height: 100vh;
+  min-height: auto;
 }
 
 .visually-hidden {
@@ -22,8 +22,8 @@
   clip-path: inset(100%);
 }
 
-.content{
-  margin-bottom: 50px;
+.content {
+  margin-bottom: 20px;
 }
 
 .marquee-wrapper {
@@ -34,15 +34,15 @@
 
 .covers-list {
   display: flex;
-  gap: 30px;
+  gap: 15px;
   width: max-content;
-  animation: scrollLeft 20s linear infinite;
-  /* animation-play-state: paused;  */
+  animation: scrollLeft 60s linear infinite;
+  animation-play-state: paused;
 }
 
-/* .covers-list.animate {
-    animation-play-state: running; 
-  } */
+.covers-list.animate {
+  animation-play-state: running;
+}
 
 .covers-item {
   flex-shrink: 0;
@@ -62,6 +62,7 @@
 
 .covers-item:hover .covers-img {
   transform: scale(1.1);
+  box-shadow: 0 0 5px rgba(106, 107, 107, 0.836);
 }
 
 @keyframes scrollLeft {
@@ -79,20 +80,27 @@
   animation-name: scrollLeft;
 }
 
+.covers-list:hover {
+  animation-play-state: paused;
+  cursor: pointer;
+}
+
+.bottom-row {
+  margin-bottom: 0;
+}
+
 /* Tablet screen */
 @media screen and (min-width: 768px) {
   .covers-item {
     width: 544px;
     height: 314px;
   }
-}
 
-/*Desktop screen*/
-@media screen and (min-width: 1440px) {
-  .marquee-wrapper {
-    transform: rotate(16deg);
-    overflow: hidden;
-    width: 120vw;
-    margin-left: -10vw;
+  .content {
+    margin-bottom: 50px;
+  }
+
+  .covers-list {
+    gap: 30px;
   }
 }
