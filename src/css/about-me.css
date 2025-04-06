@@ -1,39 +1,22 @@
-
-.section {
-  width: 100%;
-  height: 100%;
-}
-
-
 .about-me-flex {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 1376px;
-  height: 796px;
-  margin: 0 auto;
-  padding-top: 96px;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
 }
 
 .card-of-text {
-  padding-top: 64px;
-  padding-left: 64px;
-  width: 680px; 
-  height: 700px;
+
   border-radius: 24px;
   background-color: #242527;
+  padding: 32px 32px 272px 32px;
 }
 
 .about-me-text {
-  width: 552px;
-  height: 200px;
-  color: #fafafa;
-  font-weight: 500;
-  font-size: 38px;
-  line-height: 1.05;
+   font-size: 24px;
+  line-height: 117%;
   letter-spacing: -0.03em;
   text-transform: uppercase;
-
 }
 
 .about-me-red {
@@ -45,90 +28,32 @@
 }
 
 .about-me-img {
-  width: 680px; 
-  height: 700px;
   border-radius: 24px;
-  margin-left: 16px;
   display: block;
   max-width: 100%;
-  text-align: center;
 }
 
 .about-me-img img {
-  width: 100%;
-  height: 100%;
   object-fit: cover; 
   border-radius: 24px;
 }
 
-  /* @media screen  and (min-width: 768px) {
-  .section {
-    width: 100%;
-    height: 100%;
-  }
-
-  .about-me-flex {
-    display: block;
-    justify-content:center;
-    text-align: center;        
-    width: 704px;
-    margin: 0 auto;
-    padding-top: 64px;
-  }
-
-  .card-of-text {
-    width: 704px;
-    height: 700px;     
-  }
-
-  .about-me-text {
-    width: 576px;
-    height: 200px;
-  }
-
-  .about-me-img {
-    width: 100%; 
-    height: 700px;
-    margin-left: 16px;
-    max-width: 100%;
-    text-align: center;
-  }
+  @media screen  and (min-width: 768px) {
+    .card-of-text {
+      padding: 64px 64px 436px 64px;
+    }
+    
+    .about-me-text {
+      font-size: 38px;
+      line-height: 105%;
+      letter-spacing: -0.03em;
+    }
 }
 
- @media screen  and (min-width: 375px) {
-    .section {
-      width: 100%;
-      height: 100%;
+  @media screen and (min-width: 1440px) {
+    .about-me-flex {
+      flex-direction: row-reverse;
+    }
   }
 
-  .about-me-flex {
-    display: block;
-    justify-content:center;
-    text-align: center;      
-    width: 343px;
-    margin: 0 auto;
-  }
-
-  .card-of-text {
-    padding-top: 32px;
-    padding-left: 32px;
-    width: 343px;
-    height: 500px;     
-  }
-
-  .about-me-text {
-    width: 279px; 
-    height: 196px;
-    font-size: 24px;
-    line-height: 1.16; 
-  }
-
-   .about-me-img {
-    width: 100%; 
-    height: 700px;
-    margin-left: 16px;
-    max-width: 100%;
-    text-align: center;
-  }
-
- } */
+ 
