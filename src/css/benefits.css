@@ -105,9 +105,6 @@
   .cta-button {
     margin-top: 64px;
   }
-  .benefits {
-    padding: 96px 16px 0 16px;
-  }
   .benefits-list {
     flex-direction: row;
     flex-wrap: wrap;
@@ -119,7 +116,7 @@
   }
 }
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1440px) {
     .benefits-container {
       display: flex;
       justify-content: space-between;
