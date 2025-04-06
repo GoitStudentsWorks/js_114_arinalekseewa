@@ -1,11 +1,5 @@
 /* Mobile */
 
-.faq-container {
-    max-width: 375px;
-    margin: 0 auto;
-    padding: 0 16px;
-}
-
 .title-faq {
     margin-bottom: 32px;
     font-weight: 600;

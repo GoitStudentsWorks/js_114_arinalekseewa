@@ -239,11 +239,28 @@ background-color: #1c1d20;
   opacity: 0.6;
 }
 
-.slider-controls button.disabled svg {
-  fill:green;
+@media (min-width: 768px) {
+  .first-part {
+    padding: 64px;
+  }
+  .scils {
+    margin-bottom: 164px;
+  }
+  .sumb-text {
+    font-size: 44px;
+    width: 494px;
+  }
+  .scils {
+    width: 316px;
+  }
+  .img-sumb {
+    padding: 120px 45px;
+  }
 }
 
-/* Стиль для кнопки, коли вона активна */
-.slider-controls button:not(.disabled) {
-  background-color: green;
+@media (min-width: 1440px) {
+  .swiper-slide {
+    display: flex;
+    flex-direction: row;
+  }
 }
