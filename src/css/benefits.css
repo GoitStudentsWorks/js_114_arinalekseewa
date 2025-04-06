@@ -1,3 +1,4 @@
+/* Styles for Mobile devices */
 
 .benefits {
   display: flex;
@@ -101,9 +102,6 @@
   .benefits {
     padding: 96px 16px 0 16px;
   }
-  .container {
-    max-width: 768px;
-  }
   .benefits-list {
     flex-direction: row;
     flex-wrap: wrap;
@@ -115,7 +113,6 @@
   }
 }
 
-@media screen and (min-width: 1280px) {
   @media screen and (min-width: 1280px) {
     .benefits-container {
       display: flex;
@@ -149,7 +146,23 @@
       height: 270px; 
       flex: 0 0 auto;
     }
+
+  .cta-button {
+    margin-top: 64px;
   }
-}
+  .benefits {
+    padding: 164px 16px 0 16px;
+    display: grid;
+    justify-content: end;
+  }
+  .feature-item {
+    width: 332px;
+    height: 270px;
+    flex: 0 0 auto;
+  }
+  .benefits-list {
+    display: flex;
+
+  }
       
   

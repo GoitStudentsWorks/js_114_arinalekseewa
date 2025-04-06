@@ -1,12 +1,17 @@
 /* header */
 
-.header-container {
+header .container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 32px;
     background-color: transparent;
+    padding-top: 32px;
+    position: absolute;
+    left: 0;
+    min-width: 100%;
 }
+
+
 
 .header-logo {
     display: flex;
@@ -27,7 +32,7 @@
 
 .burger-icon {
     display: block;
-    fill: #FAFAFA;
+    stroke: #FAFAFA;
 }
 
 .order-nav {
@@ -45,6 +50,7 @@
 @media screen and (min-width: 768px) {
     header .container {
         padding: 0 32px;
+        padding-top: 32px;
     }
 
     .burger-icon {
@@ -270,4 +276,8 @@
 .order-nav-mobile:hover,
 .order-nav-mobile:focus {
     background-color: #E0373F;
+}
+
+.modal-close-icon {
+    stroke: #FAFAFA;
 }
