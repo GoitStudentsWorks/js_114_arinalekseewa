@@ -170,8 +170,8 @@ header .container {
     visibility: hidden;
     pointer-events: none;
 
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 0.3s ease,
+        visibility 0.3s ease;
 }
 
 /* Відкритий стан меню */
@@ -197,6 +197,7 @@ header .container {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+
 
     transform: translateX(100%);
     transition: transform 300ms ease;
