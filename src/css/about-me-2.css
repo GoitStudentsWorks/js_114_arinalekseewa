@@ -112,20 +112,11 @@
   box-sizing: border-box;
 }
 
-.about-me-item-skils {
-    border: 1px solid #F2D0D1;
-  }
-
 .about-me-item-skils.active {
   background-color: #ed3b44;
 }
 
 @media only screen and (min-width: 768px) {
-
-  .about {
-    padding: 0 32px;
-  }
-
   .about-me-text {
     padding: 64px 64px 436px 64px;
     font-size: 38px;
