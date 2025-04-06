@@ -49,22 +49,21 @@ flex-direction: row;
 gap: 6px;
 width: 279px;
 height: 96px;
-margin-top: 32px;
-margin-left: auto;
-margin-right: auto;
+font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  color: #1C1D20;
+  margin-bottom: 96px;
 }
 /*=====СКІЛ РЕАКТ====*/
 
-.scils-list-react{
+.scils-list{
 display: flex;
 align-items: center;
-justify-content: center;
-flex-direction: row;
 gap: 10px;
 border: 1px solid rgba(28, 29, 32, 0.2);
 border-radius: 60px;
 padding: 13px 18px;
-width: 80px;
 height: 45px;
 }
 
@@ -82,6 +81,12 @@ width: 57px;
 height: 45px;
 }
 
+.first-part {
+  padding: 32px;
+  display: flex;
+flex-direction: column;
+align-items: flex-start;
+}
 /*=====СКІЛ NODE=====*/
 
 .scils-list-node{
@@ -118,6 +123,7 @@ height: 45px;
   font-family: "Inter Tight", sans-serif;
 font-weight: 500;
 font-size: 24px;
+margin-bottom: 32px;
 
 /* line-height: 28px; */ 
 line-height: 1.16667;
@@ -128,9 +134,6 @@ width: 279px;
 word-break: break-word;
 display: flex;
 align-items: center;
-margin-top: 96px;
-margin-left: auto;
-margin-right: auto;
 }
 
 /*======КНОПКА-ПОСИЛАННЯ======*/
@@ -140,35 +143,26 @@ margin-right: auto;
   display: flex;
 align-items: center;
 justify-content: center;
-flex-direction: row;
-gap: 10px;
 border-radius: 60px;
 padding: 13px 32px;
-width: 141px;
 height: 45px;
 background: #ed3b44;
-margin-top:96px;
-margin-bottom: 32px;
-margin-left: 32px;
 }
 
 /*======КОНТЕЙНЕР ДЛЯ ЗОБРАЖЕННЯ=====*/
 
 
 .img-sumb{
-width: 343px;
-height: 395px;
 background: #242527;
-margin-left: auto;
-margin-right: auto;
-padding-top: 100px;
+display: flex;
+justify-content: center;
+align-content: center;
+padding: 100px 16px;
 }
 
 /*=====ТЕКСТ КНОПКИ======*/
 
 .a-text{
-  font-family: "Inter Tight", sans-serif;
-font-weight: 500;
 font-size: 16px;
 letter-spacing: -0.02em;
 color: #fafafa;
@@ -219,8 +213,7 @@ background-color: #1c1d20;
 }
 
 .img-swipe {
-margin-left: auto;
-margin-right: auto;
+
 }
 
 /* === КНОПКИ === */
