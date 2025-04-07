@@ -1,5 +1,5 @@
 import './js/header.js';
-
+import './js/about-me-2.js';
 import './js/projects.js';
 import './js/faq.js';
 import './js/covers.js';
@@ -25,10 +25,3 @@ scrollTopBtn.addEventListener('click', () => {
     behavior: 'smooth'
   });
 });
-/* 
-import './js/about-me.js';
-
-
-
-
- */
