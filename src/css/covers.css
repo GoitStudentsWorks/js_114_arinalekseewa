@@ -1,17 +1,15 @@
 /* Covers */
 
-body,
-html {
-  overflow-x: hidden;
-}
-
 .covers-section {
   background-image: url(../img/elements.png);
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   overflow: hidden;
   position: relative;
-  min-height: auto;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 100px;
 }
 
 .visually-hidden {
@@ -32,8 +30,7 @@ html {
 }
 
 .marquee-wrapper {
-  width: 100vw;
-  margin-left: 0;
+  margin-left: -100px;
   transform: rotate(16deg);
 }
 
@@ -65,11 +62,6 @@ html {
   transition: transform 0.5s ease;
 }
 
-.covers-item:hover .covers-img {
-  transform: scale(1.1);
-  box-shadow: 0 0 5px rgba(106, 107, 107, 0.836);
-}
-
 @keyframes scrollLeft {
   0% {
     transform: translateX(0);
@@ -85,12 +77,37 @@ html {
   animation-name: scrollLeft;
 }
 
-.covers-list:hover {
-  animation-play-state: paused;
-  cursor: pointer;
+.first-row {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
 }
 
-.bottom-row {
+.first-row .marquee-wrapper {
+  transform: rotate(16deg) translateY(120px);
+}
+
+.top-row {
+  margin-bottom: -95px;
+}
+
+.top-row .marquee-wrapper {
+  transform: rotate(16deg) translateY(-120px);
+}
+
+.fifth-row {
+  position: absolute;
+
+  z-index: 1;
+}
+
+.fifth-row .marquee-wrapper {
+  width: 371px;
+  transform: rotate(16deg) translateY(-8px);
+}
+
+.fifth-row {
   margin-bottom: 0;
 }
 
@@ -107,5 +124,56 @@ html {
 
   .covers-list {
     gap: 30px;
+  }
+
+  .middle-row {
+    margin-top: -225px;
+  }
+
+  .top-row .marquee-wrapper {
+    transform: rotate(16deg) translateY(-215px);
+  }
+
+  .fifth-row {
+    margin-top: -40px;
+  }
+
+  .fifth-row .marquee-wrapper {
+    width: 135px;
+    transform: rotate(16deg) translateY(-40px);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .covers-list:hover {
+    animation-play-state: paused;
+    cursor: pointer;
+  }
+
+  .covers-item:hover .covers-img {
+    transform: scale(1.1);
+    box-shadow: 0 0 5px rgba(106, 107, 107, 0.836);
+  }
+
+  .first-row {
+    height: 15px;
+    width: 100%;
+  }
+
+  .first-row .marquee-wrapper {
+    transform: rotate(16deg) translateX(400px) translateY(-450px);
+  }
+
+  .top-row {
+    margin-top: -145px;
+  }
+
+  .fifth-row {
+    height: 135px;
+  }
+
+  .fifth-row .marquee-wrapper {
+    width: 464px;
+    transform: rotate(16deg) translateY(-100px);
   }
 }
