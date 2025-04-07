@@ -91,11 +91,6 @@
 
 /* Desktop */
 @media only screen and (min-width: 1440px) {
-  .container {
-    max-width: 1440px;
-    padding-top: 164px;
-  }
-
   .about-me-flex {
     flex-direction: row;
     gap: 16px;
@@ -112,6 +107,7 @@
     width: 680px;
     height: 700px;
   }
+}
 
 /* Tablet */
 @media only screen and (min-width: 768px) {
