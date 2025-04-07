@@ -250,10 +250,6 @@
     color: #fafafa;
   }
 
-  .about-me-img img {
-    margin-bottom: 64px;
-  }
-
   .about-me-item {
     padding-bottom: 24px;
     margin-bottom: 32px;
@@ -299,24 +295,8 @@
 }
 
 @media only screen and (min-width: 1440px) {
-  .about-me-flex {
-    display: flex;
-    gap: 16px;
-    margin-bottom: 96px;
-  }
-
-  .about-me-img img {
-    max-width: none;
-    margin-bottom: 0;
-  }
-
   .about-me-text {
     margin-bottom: 0;
-  }
-
-  .about-me-flex-div {
-    margin-left: auto;
-    max-width: 612px;
   }
 
   .about-me-text-wrap {

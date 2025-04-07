@@ -8,6 +8,7 @@
   flex-direction: column;
   gap: 16px;
   align-items: center;
+  margin-bottom: 32px;
 }
 
 .card-of-text {
@@ -44,10 +45,13 @@
 } 
 
   @media screen  and (min-width: 768px) {
+    .about-me-flex {
+      margin-bottom: 64px;
+    }
     .card-of-text {
       padding: 64px 64px 436px 64px;
+      width: 704px;
     }
-    
     .about-me-text {
       font-size: 38px;
       line-height: 105%;
@@ -56,8 +60,12 @@
 }
 
   @media screen and (min-width: 1440px) {
+    .card-of-text {
+      width: 680px;
+    }
     .about-me-flex {
       flex-direction: row-reverse;
+      margin-bottom: 96px;
     }
   }
 
