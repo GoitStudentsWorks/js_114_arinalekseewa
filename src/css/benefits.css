@@ -87,18 +87,14 @@
   letter-spacing: -0.32px;
   cursor: pointer;
   font-family: 'Inter Tight', -apple-system, Roboto, Helvetica, sans-serif;
-  transition: background-color 0.2s, border-color 0.2s;
+  transition: border 0.3ms ease;
   text-decoration: none;
   display: inline-block;
 }
 
-.cta-button:hover {
-  background-color: rgba(250, 250, 250, 0.1);
-}
-
+.cta-button:hover,
 .cta-button:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px rgba(250, 250, 250, 0.5);
+  border: 1px solid rgba(250, 250, 250);
 }
 
 @media screen and (min-width: 768px) {
