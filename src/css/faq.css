@@ -79,9 +79,9 @@
 .is-active .icon-answer,
 .is-active .title-item-list,
 .title-item-list:hover,
-.title-item-list:active,
+.title-item-list:focus,
 .icon-answer:hover,
-.icon-answer:active,
+.icon-answer:focus,
 .btn-answer:hover .icon-answer {
     color: #ed3b44;
     stroke: #1c1d20;
