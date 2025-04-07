@@ -1,12 +1,17 @@
 /* header */
 
-.header-container {
+header .container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 32px;
     background-color: transparent;
+    padding-top: 32px;
+    position: absolute;
+    left: 0;
+    min-width: 100%;
 }
+
+
 
 .header-logo {
     display: flex;
@@ -45,6 +50,7 @@
 @media screen and (min-width: 768px) {
     header .container {
         padding: 0 32px;
+        padding-top: 32px;
     }
 
     .burger-icon {
@@ -164,8 +170,8 @@
     visibility: hidden;
     pointer-events: none;
 
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 0.3s ease,
+        visibility 0.3s ease;
 }
 
 /* Відкритий стан меню */
@@ -187,10 +193,11 @@
     padding-top: 302px;
     padding-bottom: 64px;
 
-    background-image: url(../img/img-hero-mob.webp);
-    background-repeat: no-repeat;
-    background-position: center;
+    background-image: url(../img/img-mobile-menu.webp);
     background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+
 
     transform: translateX(100%);
     transition: transform 300ms ease;
@@ -199,6 +206,14 @@
 /* При відкритті меню */
 .mobile-menu.is-open .mobile-menu-container {
     transform: translateY(0);
+}
+
+@media screen and (min-resolution: 192dpi),
+screen and (min-resolution: 2dppx),
+screen and (min-device-pixel-ratio: 2) {
+    .mobile-menu-container {
+        background-image: url(../img/img-mobile-menu@2x.webp);
+    }
 }
 
 .mobile-close-btn {
@@ -273,5 +288,5 @@
 }
 
 .modal-close-icon {
-  stroke: #FAFAFA;
+    stroke: #FAFAFA;
 }

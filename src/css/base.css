@@ -1,12 +1,12 @@
 :root {
   /* font-family: Iner Tight, sans-serif; */
-  font-family: "Inter Tight", sans-serif;
+  font-family: 'Inter Tight', sans-serif;
   line-height: 1.5;
   font-weight: 500;
   font-size: 16px;
   letter-spacing: -0.02em;
 
-  color: #FAFAFA;
+  color: #fafafa;
   background-color: rgba(255, 255, 255, 0.87);
 
   font-synthesis: none;
@@ -18,7 +18,7 @@
 
 body {
   display: flex;
-  background-color: #1C1D20;
+  background-color: #1c1d20;
   flex-direction: column;
   min-width: 100vw;
   min-height: 100vh;

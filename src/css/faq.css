@@ -1,11 +1,5 @@
 /* Mobile */
 
-.faq-container {
-    max-width: 375px;
-    margin: 0 auto;
-    padding: 0 16px;
-}
-
 .title-faq {
     margin-bottom: 32px;
     font-weight: 600;
@@ -85,9 +79,9 @@
 .is-active .icon-answer,
 .is-active .title-item-list,
 .title-item-list:hover,
-.title-item-list:active,
+.title-item-list:focus,
 .icon-answer:hover,
-.icon-answer:active,
+.icon-answer:focus,
 .btn-answer:hover .icon-answer {
     color: #ed3b44;
     stroke: #1c1d20;
@@ -115,12 +109,6 @@
 /* Tablet */
 
 @media screen and (min-width: 768px) {
-    .faq-container {
-        max-width: 704px;
-        margin: 0 auto;
-        padding: 0;
-    }
-
     .title-item-list {
         width: 485px;
     }
@@ -138,11 +126,6 @@
 /* Laptop */
 
 @media screen and (min-width: 1440px) {
-    .faq-container {
-        max-width: 1376px;
-        margin: 0 auto;
-    }
-
     .faq-item {
         padding: 32px 0 26px 0;
     }
