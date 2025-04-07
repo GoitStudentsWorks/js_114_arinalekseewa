@@ -47,12 +47,13 @@ img {
   width: 40px;
   height: 40px;
   padding: 10px;
-  transform: rotate(180deg);
+  transform: translateY(20px);
 }
 
 .scroll-top-btn.show {
   opacity: 1;
   visibility: visible;
+  transform: translateY(0);
 }
 
 .scroll-top-btn svg {
@@ -63,16 +64,13 @@ img {
   transition: stroke 0.3s ease;
 }
 
-/* Ось тут поправлений селектор */
 .scroll-top-btn:hover,
 .scroll-top-btn:focus {
   background-color: #ed3b44;
   transform: translateY(-3px);
 }
 
-/* А тут — колір іконки при hover/focus */
 .scroll-top-btn:hover svg,
 .scroll-top-btn:focus svg {
   stroke: #1C1D20;
-  transform: rotate(180deg);
 }

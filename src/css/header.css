@@ -193,10 +193,10 @@ header .container {
     padding-top: 302px;
     padding-bottom: 64px;
 
-    background-image: url(../img/img-hero-mob.webp);
-    background-repeat: no-repeat;
-    background-position: center;
+    background-image: url(../img/img-mobile-menu.webp);
     background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
 
 
     transform: translateX(100%);
@@ -206,6 +206,14 @@ header .container {
 /* При відкритті меню */
 .mobile-menu.is-open .mobile-menu-container {
     transform: translateY(0);
+}
+
+@media screen and (min-resolution: 192dpi),
+screen and (min-resolution: 2dppx),
+screen and (min-device-pixel-ratio: 2) {
+    .mobile-menu-container {
+        background-image: url(../img/img-mobile-menu@2x.webp);
+    }
 }
 
 .mobile-close-btn {
