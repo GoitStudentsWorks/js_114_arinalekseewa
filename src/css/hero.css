@@ -67,7 +67,6 @@ screen and (min-device-pixel-ratio: 2) {
 .social-item:hover,
 .social-item:focus {
     border: 1px solid rgba(250, 250, 250);
-    background-color: #E0373F;
 }
 
 .social-item a {
@@ -88,13 +87,16 @@ screen and (min-device-pixel-ratio: 2) {
 .email-link:hover,
 .email-link:focus {
     border: 1px solid rgba(250, 250, 250);
-    background-color: #E0373F;
 }
 
 /* Tablet (768px and up) */
 @media (min-width: 768px) {
     .hero-container {
         background-image: url(../img/Hero_img/tablet-hero.webp);
+        
+    }
+    section.hero-container.container {
+        padding-top: 300px;
     }
 @media screen and (min-resolution: 192dpi),
             screen and (min-resolution: 2dppx),
@@ -107,9 +109,6 @@ screen and (min-device-pixel-ratio: 2) {
     .hero-content {
         align-items: flex-end;
         gap: 187px;
-    }
-    .hero-container {
-        padding-top: 300px;
     }
 
     .hero-title {
