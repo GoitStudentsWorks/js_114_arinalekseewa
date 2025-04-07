@@ -1,0 +1,106 @@
+/* Covers */
+
+.covers-section {
+  background-image: url(../img/elements.png);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  position: relative;
+  min-height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+  clip-path: inset(100%);
+}
+
+.content {
+  margin-bottom: 20px;
+}
+
+.marquee-wrapper {
+  width: 100vw;
+  margin-left: 0;
+  transform: rotate(16deg);
+}
+
+.covers-list {
+  display: flex;
+  gap: 15px;
+  width: max-content;
+  animation: scrollLeft 60s linear infinite;
+  animation-play-state: paused;
+}
+
+.covers-list.animate {
+  animation-play-state: running;
+}
+
+.covers-item {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 283px;
+  height: 163px;
+}
+
+.covers-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.covers-item:hover .covers-img {
+  transform: scale(1.1);
+  box-shadow: 0 0 5px rgba(106, 107, 107, 0.836);
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.top-row .covers-list,
+.bottom-row .covers-list,
+.middle-row .covers-list {
+  animation-name: scrollLeft;
+}
+
+.covers-list:hover {
+  animation-play-state: paused;
+  cursor: pointer;
+}
+
+.bottom-row {
+  margin-bottom: 0;
+}
+
+/* Tablet screen */
+@media screen and (min-width: 768px) {
+  .covers-item {
+    width: 544px;
+    height: 314px;
+  }
+
+  .content {
+    margin-bottom: 50px;
+  }
+
+  .covers-list {
+    gap: 30px;
+  }
+}

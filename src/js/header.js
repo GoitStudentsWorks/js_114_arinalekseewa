@@ -4,16 +4,9 @@ const openModalBtn = document.querySelector(".burger-btn");
 const closeModalBtn = document.querySelector(".mobile-close-btn");
 const modal = document.querySelector(".mobile-menu");
 const navLinks = document.querySelectorAll(".mobile-navigation-link");
+const orderBtn = document.querySelector(".order-nav-mobile");
 
 openNavBtn.addEventListener('click', toggleNav);
-
-openModalBtn.addEventListener("click", openModal);
-closeModalBtn.addEventListener("click", closeModal);
-modal.addEventListener("click", (event) => {
-    if (event.target === modal) {
-        closeModal();
-    }
-});
 
 function toggleNav() {
     nav.classList.toggle('is-open');
@@ -26,8 +19,18 @@ function openModal() {
 
 function closeModal() {
     modal.classList.remove("is-open");
-    document.body.classList.remove("no-scroll");
+    setTimeout(() => {
+        document.body.classList.remove("no-scroll");
+    }, 300);
 }
+
+openModalBtn.addEventListener("click", openModal);
+closeModalBtn.addEventListener("click", closeModal);
+modal.addEventListener("click", (event) => {
+    if (event.target === modal) {
+        closeModal();
+    }
+});
 
 modal.addEventListener("click", (event) => {
     if (event.target === modal) {
@@ -37,6 +40,10 @@ modal.addEventListener("click", (event) => {
 
 navLinks.forEach(link => {
     link.addEventListener("click", () => {
-        closeMenu();
+        closeModal();
     });
+});
+
+orderBtn.addEventListener("click", () => {
+    closeModal();
 });

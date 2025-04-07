@@ -12,7 +12,6 @@ const aboutMeSection = document.querySelector('#about-me');
 window.addEventListener('scroll', () => {
   const sectionTop = aboutMeSection.offsetTop;
 
-  // Якщо користувач проскролив нижче секції About Me
   if (window.scrollY >= sectionTop) {
     scrollTopBtn.classList.add('show');
   } else {
