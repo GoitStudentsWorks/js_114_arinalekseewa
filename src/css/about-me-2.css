@@ -1,6 +1,9 @@
 @import 'swiper/css';
 @import 'swiper/css/navigation';
 
+section#about-me-2.section {
+  padding-top: 32px;
+}
 .container.about {
   padding: 32px 16px 0px 16px;
 }
@@ -85,6 +88,12 @@
 }
 /* Tablet */
 @media only screen and (min-width: 768px) {
+  .hero-container {
+    height: 1024px;
+  }
+  section#about-me-2.section {
+      padding-top: 64px;
+    }
     .container.about {
     padding: 64px 32px 0px 32px;
   }
@@ -114,9 +123,15 @@
 
 /* Desktop */
 @media only screen and (min-width: 1440px) {
+  .hero-container {
+      height: 900px;
+    }
   .container.about {
     padding: 96px 32px 0px 32px;
   }
+    section#about-me-2.section {
+      padding-top: 96px;
+    }
 
   .about-me-content {
     flex-direction: row;
@@ -230,7 +245,7 @@
   list-style: none;
   z-index: 1;
   height: 130px;
-  width: 260px;
+  width: 130px;
   margin-left: 0;
 }
 
@@ -278,6 +293,12 @@
   box-shadow: none;
   border-color: none;
 }
+@media only screen and (min-width: 375px) {
+  .swiper.about-me-swiper-container {
+    width: 260px;;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .about-me-item.open .about-me-content {
     max-height: 280px;
