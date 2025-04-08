@@ -48,7 +48,7 @@ items.forEach(item => {
 });
 const swiper = new Swiper('.about-me-swiper-container', {
   loop: true,
-  slidesPerView: 2,
+  slidesPerView: 1,
   modules: [Navigation, Mousewheel, Keyboard],
   navigation: {
     nextEl: '.swiper-button-next',
@@ -57,6 +57,7 @@ const swiper = new Swiper('.about-me-swiper-container', {
   mousewheel: true,
   roundLengths: true,
   breakpoints: {
+    375: { slidesPerView: 2 },
     768: { slidesPerView: 3 },
     1440: { slidesPerView: 6 },
   },
