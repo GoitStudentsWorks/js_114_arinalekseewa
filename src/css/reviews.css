@@ -183,8 +183,7 @@
   }
 
   .reviews-section {
-    padding-top: 48px;
-    padding-bottom: 48px;
+    padding-top: 96px;
   }
 
   .reviews-list {
@@ -221,8 +220,8 @@
   }
 
   .reviews-section {
-    padding-top: 82px;
-    padding-bottom: 82px;
+    padding-top: 164px;
+    padding-bottom: 164px;
   }
 
   .reviews-list-item.swiper-slide {
