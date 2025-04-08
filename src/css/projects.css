@@ -142,7 +142,7 @@ padding: 13px 32px;
 height: 45px;
 background-color: #ed3b44;
 
-transform: background-color 0.3ms ease;
+transform: all 0.3ms ease;
 }
 
 .a-project:hover,
