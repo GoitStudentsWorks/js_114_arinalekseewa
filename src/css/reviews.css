@@ -148,7 +148,7 @@
   height: 52px;
   justify-content: center;
   align-items: center;
-  transform: border 3s ease;
+  transform: all 3s ease;
 }
 
 .swiper-button-prev.button-prev:hover,

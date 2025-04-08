@@ -71,7 +71,7 @@ header {
         padding: 18px 24px;
         font-weight: 500;
 
-        transform: background-color 300 ms ease;
+        transform: all 300 ms ease;
     }
 
     .order-nav:hover,
@@ -238,7 +238,7 @@ screen and (min-device-pixel-ratio: 2) {
     color: #FAFAFA;
     position: relative;
 
-    transform: color 300ms ease;
+    transform: all 300ms ease;
 }
 
 .mobile-navigation-link:hover,
@@ -256,7 +256,7 @@ screen and (min-device-pixel-ratio: 2) {
     border-radius: 50%;
     background-color: #FAFAFA;
 
-    transform: background-color 300ms ease;
+    transform: all 300ms ease;
 }
 
 .mobile-navigation-link:hover::after,
@@ -277,7 +277,7 @@ screen and (min-device-pixel-ratio: 2) {
     font-weight: 500;
     font-size: 14px;
 
-    transform: background-color 300 ms ease;
+    transform: all 300 ms ease;
 }
 
 .order-nav-mobile:hover,

@@ -62,7 +62,7 @@ screen and (min-device-pixel-ratio: 2) {
     border-radius: 60px;
     width: 37px;
     height: 37px;
-    transform: border 0.3ms ease;
+    transform: all 0.3ms ease;
 }
 
 .social-item:hover,
