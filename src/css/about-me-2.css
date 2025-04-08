@@ -272,6 +272,7 @@ section#about-me-2.section {
 
 .swiper-slide.about-me-item-skils.active {
   background-color: #ed3b44;
+  border: none;
 }
 
 .icon-about-me-skills.swiper-button-next,
