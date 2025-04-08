@@ -7,10 +7,16 @@
 .about-me-content {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 32px;
   align-items: center;
 }
-
+.about-me-flex-div.about-me-content {
+  max-height: 560px;
+  align-items: flex-start;
+}
+.role.about-me-flex-div.about-me-content {
+  gap: 10px;
+}
 .about-me-card {
   background: #242527;
   border-radius: 24px;
@@ -57,13 +63,24 @@
   object-fit: cover;
 }
 
-.about-me-list-skils-set {
-
+.icon-arrow-about-me {
+  border: 1px solid rgba(250, 250, 250, 0.2);
+    background: transparent;
+    border-radius: 100px;
+    padding: 9px;
+    width: 36px;
+    height: 36px;
+    transition: transform 0.5s ease-in-out, top 0.5s ease-in-out;
+    stroke: #fafafa;
 }
 /* Tablet */
 @media only screen and (min-width: 768px) {
     .container.about {
     padding: 64px 32px 0px 32px;
+  }
+
+  .swiper-slide.about-me-item-skils {
+    height: 200px;;
   }
 
   .about-me-card {
@@ -120,9 +137,11 @@
   position: relative;
   padding-bottom: 20px;
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
-.about-me-titel {
+.about-me-title {
   font-weight: 600;
   font-size: 16px;
   line-height: 1.5;
@@ -148,12 +167,8 @@
   top: 100%;
 }
 
-.about-me-list-text:not(:last-child) {
-  margin-bottom: 10px;
-}
-
 .about-me-list-text.about-me-mg {
-  margin-bottom: 32px;
+  margin-bottom: 0;
 }
 
 .icon-arrow {
@@ -222,23 +237,42 @@
   border: 1px solid rgba(250, 250, 250, 0.2);
   flex: 0 0 auto;
   overflow: hidden;
-  width: 130px;
-  height: 130px;
+  background-color: transparent;
+  min-width: 130px;
 }
 
 .swiper-slide.about-me-item-skils.active {
   background-color: #ed3b44;
 }
 
-.icon-about-me-skills.swiper-button-next.swiper-button-disabled {
+.icon-about-me-skills.swiper-button-next,
+.icon-about-me-skills.swiper-button-disabled {
   stroke: #3B3B3B;
   cursor: pointer;
   position: relative;
+  fill: none;
   margin-left: 16px;
   flex-shrink: 0;
+  border: none;
+  opacity: 1;
+  position: relative;
+  width: 28px;
+  height: 28px;
 }
-
+.icon-about-me-skills.swiper-button-next:hover,
+.icon-about-me-skills.swiper-button-disabled:focus {
+  box-shadow: none;
+  border-color: none;
+}
 @media only screen and (min-width: 768px) {
+  .about-me-item.open .about-me-content {
+    max-height: 280px;
+    gap: 10px;
+  }
+  .swiper.about-me-swiper-container {
+    width: 600px;
+    height: 200px;
+  }
   .about-me-text {
     padding: 64px 64px 436px 64px;
     font-size: 38px;
@@ -291,6 +325,23 @@
 }
 
 @media only screen and (min-width: 1440px) {
+  .role.about-me-flex-div.about-me-content {
+      gap: 10px;
+      max-height: 96px;
+    }
+  .about-me-item.open.about-me-content {
+    min-height: 320px;
+    flex-direction: column;
+    max-width: 612px;
+    margin-left: 696px;
+  }
+  .role.about-me-item.about-me-content.open {
+    max-height: 96px;
+    min-height: 96px;
+  }
+  .swiper.about-me-swiper-container {
+    width: 1200px;
+  }
   .about-me-text {
     margin-bottom: 0;
   }
