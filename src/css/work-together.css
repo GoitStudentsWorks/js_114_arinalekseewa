@@ -2,7 +2,7 @@
   position: relative;
   z-index: 1;
   background-color: transparent;
-  padding-top: 96px;
+  padding-top: 32px;
   padding-bottom: 32px;
 }
 .connect__picture {
@@ -17,6 +17,7 @@
   .connect__container {
     display: flex;
     flex-direction: column;
+    padding: 0px 196px 0px 196px;
   }
 }
 
@@ -37,6 +38,10 @@
     font-size: 64px;
     margin-bottom: 18px;
   }
+    .connect {
+      padding-top: 88px;
+      padding-bottom: 169px;
+    }
 }
 
 .connect__icon {
