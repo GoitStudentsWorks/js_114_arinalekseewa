@@ -4,10 +4,11 @@
 @import 'izitoast/dist/css/iziToast.css';
 
 .reviews-swiper.swiper {
-  height: 100%;
+  height: 302px;
   width: 100%;
   position: relative;
   overflow: hidden;
+  margin-bottom: 32px;
 }
 
 .reviews-section-title {
@@ -167,7 +168,6 @@
     gap: 20px;
     bottom: -80px;
     left: 50%;
-    transform: translateX(-50%);
   }
 
   .swiper-button-prev.button-prev,

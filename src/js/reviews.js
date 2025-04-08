@@ -6,8 +6,6 @@ const reviewList = document.querySelector('.reviews-list');
 const swiperControlButtons = document.querySelector('.swiper-control-buttons');
 const swiperSlide = document.querySelector('.swiper-slide');
 
-swiperSlide.classList.add('no-transition');
-
 axios.defaults.baseURL = 'https://portfolio-js.b.goit.study';
 
 const fetchReviews = () => {
