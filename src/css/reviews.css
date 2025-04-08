@@ -114,8 +114,8 @@
 
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
-  box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.2);
-  border-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid #1C1D20;
+  box-shadow: 0 0 10px rgba(237, 59, 68, 0.5), 0 0 20px rgba(237, 59, 68, 0.3);
 }
 
 .swiper-button-prev-icon,
@@ -128,7 +128,8 @@
 
 .swiper-button-prev:hover .swiper-button-prev-icon,
 .swiper-button-next:hover .swiper-button-next-icon {
-  stroke: #fff;
+  stroke: rgba(237, 59, 68, 0.6);
+  fill: none;
 }
 
 .swiper-button-prev.button-prev,
@@ -142,6 +143,11 @@
   height: 52px;
   justify-content: center;
   align-items: center;
+}
+
+.swiper-button-prev.button-prev:hover,
+.swiper-button-next.button-next:hover {
+  border: none;
 }
 
 .swiper-button-prev::after,

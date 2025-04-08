@@ -9,30 +9,42 @@ document.addEventListener('DOMContentLoaded', function () {
     collapse: false,
   });
   const items = document.querySelectorAll('.about-me-item');
-  items.forEach((item, index) => {
-    const content = item.querySelector('div:nth-of-type(2)');
-    const arrow = item.querySelector('.icon-arrow-about-me');
-    content.classList.add('about-me-content');
-    if (index === 0) {
-      item.classList.add('open');
-      content.style.maxHeight = content.scrollHeight + 'px';
-      arrow.style.transform = 'rotate(180deg)';
-    }
-  });
-  document.querySelectorAll('.about-me-icon').forEach(title => {
-    title.addEventListener('click', function () {
+items.forEach(item => {
+  const content = item.querySelector('div:nth-of-type(2)');
+  const arrow = item.querySelector('.icon-arrow-about-me');
+  const title = item.querySelector('.about-me-title');
+
+  content.classList.add('about-me-content');
+
+  item.classList.remove('open');
+  content.style.maxHeight = '0px';
+  arrow.style.transform = 'rotate(0deg)';
+  title.classList.remove('active');
+  arrow.classList.remove('active');
+});
+
+    document.querySelectorAll('.about-me-icon').forEach(icon => {
+    icon.addEventListener('click', function () {
       const item = this.closest('.about-me-item');
       const content = item.querySelector('div:nth-of-type(2)');
       const arrow = item.querySelector('.icon-arrow-about-me');
+      const title = item.querySelector('.about-me-title');
       const isOpen = item.classList.toggle('open');
+
       if (isOpen) {
         content.style.maxHeight = content.scrollHeight + 'px';
+        title.classList.add('active');
+        arrow.classList.add('active');
       } else {
         content.style.maxHeight = '0px';
+        title.classList.remove('active');
+        arrow.classList.remove('active');
       }
+
       arrow.style.transform = isOpen ? 'rotate(180deg)' : 'rotate(0deg)';
     });
   });
+
 });
 const swiper = new Swiper('.about-me-swiper-container', {
   loop: true,

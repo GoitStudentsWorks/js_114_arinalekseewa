@@ -29,9 +29,15 @@ button.btn-answer.ac-trigger {
 button.btn-answer.ac-trigger::after {
     content: none;
 }
-button.btn-answer.ac-trigger:hover {
+button.btn-answer.ac-trigger:hover,
+button.btn-answer.ac-trigger.active {
     color: #ffc5c5;
+    border: none;
     box-shadow: 0 0 10px rgba(237, 59, 68, 0.5), 0 0 20px rgba(237, 59, 68, 0.3); 
+}
+button.btn-answer.ac-trigger:hover svg,
+button.btn-answer.ac-trigger.active svg {
+    stroke: rgba(237, 59, 68, 0.6);
 }
 
 .button.btn-answer.ac-trigger:focus.title-item-list {

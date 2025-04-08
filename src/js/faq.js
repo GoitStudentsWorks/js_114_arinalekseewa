@@ -19,6 +19,7 @@ document.querySelectorAll('.questions').forEach((questionBlock, index) => {
   button.addEventListener('click', () => {
     title.classList.toggle('active');
     panel.classList.toggle('open');
+    button.classList.toggle('active');
   });
 });
 
