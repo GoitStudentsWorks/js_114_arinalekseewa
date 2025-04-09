@@ -144,6 +144,9 @@ div.ac-panel {
 /* Laptop */
 
 @media screen and (min-width: 1440px) {
+    .faq-item.ac.js-enabled {
+        margin-bottom: 0;
+    }
     .faq-list.accordion-container {
         flex-direction: row;
     }
@@ -156,40 +159,40 @@ div.ac-panel {
         flex-wrap: wrap;
     }
 
-    .faq-list li:nth-child(1) {
+    .faq-item.ac.js-enabled:nth-child(1) {
         order: 1;
         border-bottom: none;
         border-right: 1px solid rgba(250, 250, 250, 0.2);
         padding-right: 31.5px;
     }
 
-    .faq-list li:nth-child(2) {
+    .faq-item.ac.js-enabled:nth-child(2) {
         order: 3;
         border-bottom: none;
         border-right: 1px solid rgba(250, 250, 250, 0.2);
         padding-right: 31.5px;
     }
 
-    .faq-list li:nth-child(3) {
+        .faq-item.ac.js-enabled:nth-child(3) {
         order: 5;
         border-right: 1px solid rgba(250, 250, 250, 0.2);
         padding-right: 31.5px;
     }
 
-    .faq-list li:nth-child(4) {
+        .faq-item.ac.js-enabled:nth-child(4) {
         order: 2;
         border-bottom: none;
         padding-left: 31.5px;
     }
 
-    .faq-list li:nth-child(5) {
+        .faq-item.ac.js-enabled:nth-child(5) {
         order: 4;
         border-right: none;
         border-bottom: none;
         padding-left: 31.5px;
     }
 
-    .faq-list li:nth-child(6) {
+        .faq-item.ac.js-enabled:nth-child(6) {
         order: 6;
         padding-left: 31.5px;
     }
