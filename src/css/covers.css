@@ -6,7 +6,6 @@
 
 .covers-section {
   margin: 0 auto;
-  padding-top: 64px;
   width: 100%;
   overflow: hidden;
 }
@@ -93,9 +92,6 @@
 
 /* Tablet screen */
 @media screen and (min-width: 768px) {
-  .covers-section {
-    padding-top: 96px;
-  }
   .covers-item {
     width: 544px;
   }
@@ -116,9 +112,6 @@
 
 /* Desktop screen */
 @media screen and (min-width: 1440px) {
-  .covers-section {
-    padding-top: 100px;
-  }
   .first-row {
     margin-top: -450px;
   }

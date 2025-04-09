@@ -147,6 +147,7 @@
   width: 52px;
   height: 52px;
   justify-content: center;
+  fill: none;
   align-items: center;
   transform: all 3s ease;
 }
@@ -176,12 +177,6 @@
 /* Media */
 
 @media screen and (min-width: 768px) {
-  .reviews-container {
-    max-width: 704px;
-    margin: 0 auto;
-    padding: 0;
-  }
-
   .reviews-section {
     padding-top: 96px;
   }
@@ -214,11 +209,6 @@
 }
 
 @media screen and (min-width: 1440px) {
-  .reviews-container {
-    max-width: 1376px;
-    margin: 0 auto;
-  }
-
   .reviews-section {
     padding-top: 164px;
     padding-bottom: 164px;
