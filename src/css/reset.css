@@ -74,3 +74,12 @@ img {
 .scroll-top-btn:focus svg {
   stroke: #1C1D20;
 }
+
+@media screen and (min-width: 1440px) {
+  .scroll-top-btn {
+    width: 50px;
+    height: 50px;
+    bottom: 40px;
+    right: 40px;
+  }
+}

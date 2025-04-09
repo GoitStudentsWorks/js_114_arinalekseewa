@@ -1,13 +1,10 @@
 .hero-container {
-    display: flex;
-    flex-direction: column;
-    padding-top: 281px;
+    padding-top: 280px;
     padding-bottom: 32px;
     background-image: url(../img/Hero_img/mobile-hero.webp);
     background-size: contain;
     background-position: left center;
     background-repeat: no-repeat;
-    height: 812px;
 }
 @media screen and (min-resolution: 192dpi),
 screen and (min-resolution: 2dppx),
@@ -18,14 +15,8 @@ screen and (min-device-pixel-ratio: 2) {
 }
 
 .hero-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     flex: 1;
     text-align: left;
-    align-items: flex-end;
-    justify-content: space-between;
 }
 
 .hero-title {
@@ -34,6 +25,7 @@ screen and (min-device-pixel-ratio: 2) {
     line-height: 100%;
     letter-spacing: -0.03em;
     text-transform: uppercase;
+    margin-bottom: 212px;
 }
 
 .hero-footer {
@@ -111,9 +103,6 @@ screen and (min-device-pixel-ratio: 2) {
         background-image: url(../img/Hero_img/tablet-hero.webp);
         
     }
-    section.hero-container.container {
-        padding-top: 300px;
-    }
 @media screen and (min-resolution: 192dpi),
             screen and (min-resolution: 2dppx),
             screen and (min-device-pixel-ratio: 2) {
@@ -124,16 +113,17 @@ screen and (min-device-pixel-ratio: 2) {
 
     .hero-content {
         align-items: flex-end;
-        gap: 187px;
     }
 
     .hero-title {
         font-size: 90px;
+        margin-bottom: 188px;
     }
 
 
     .hero-footer {
         gap: 8px;
+        justify-content: flex-end;
     }
 
     .social-links {
@@ -159,7 +149,6 @@ screen and (min-device-pixel-ratio: 2) {
 @media (min-width: 1440px) {
     .hero-container {
         background-image: url(../img/Hero_img/desktop-hero.webp);
-        height: 900px; 
     }
 
         @media screen and (min-resolution: 192dpi),
@@ -170,24 +159,18 @@ screen and (min-device-pixel-ratio: 2) {
             }
         }
 
-    .hero-content {
-        gap: 243px;
-        align-items: center;
-    }
-
     .hero-title {
         text-align: left;
+        margin-bottom: 244px;
+        display: flex;
+        justify-content: center;
     }
 
-
     .hero-content {
-        justify-content: center;
         align-items: center;
     }
 
     .hero-footer {
         align-self: flex-end;
-        margin-right: 32px;
-        margin-bottom: 32px;
     }
 }

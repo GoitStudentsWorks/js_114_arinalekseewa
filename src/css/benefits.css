@@ -30,7 +30,7 @@
   padding: 0px;
   align-items: center;
   justify-content: center;
-  padding-bottom: 32px;
+  margin-bottom: 32px;
 }
 
 .feature-item {
@@ -133,7 +133,7 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     width: 704px;
-    padding-bottom: 64px;
+    margin-bottom: 64px;
   }
   .feature-item {
     max-width: 344px;
@@ -168,7 +168,6 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: flex-start;
-      margin-bottom: 32px;
       width: 680px;
     }
     .feature-item {

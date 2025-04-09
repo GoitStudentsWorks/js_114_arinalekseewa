@@ -141,6 +141,9 @@ border-radius: 60px;
 padding: 13px 32px;
 height: 45px;
 background-color: #ed3b44;
+font-size: 16px;
+  letter-spacing: -0.02em;
+  color: #fafafa;
 
 transform: all 0.3ms ease;
 }
@@ -163,29 +166,15 @@ border-bottom-left-radius: 24px;
 border-bottom-right-radius: 24px;
 }
 
-/*=====ТЕКСТ КНОПКИ======*/
-
-.a-text{
-font-size: 16px;
-letter-spacing: -0.02em;
-color: #fafafa;
-
-}
-
 /*=====КОНТЕЙНЕР КНОПОК ГОРТАННЯ=====*/
 
 .slider-controls{
   display: flex;
-align-items: flex-start;
-justify-content: flex-start;
 flex-direction: row;
 gap: 12px;
-width: 116px;
-height: 52px;
 margin-top: 32px;
-margin-left: auto;
-margin-right: auto;
 fill: none;
+justify-content: center;
 }
 
 
@@ -296,6 +285,18 @@ background-color: transparent;
 }
 
 @media (min-width: 768px) {
+  .prev{
+    height: 68px;
+    width: 68px;
+  }
+  .next {
+    height: 68px;
+    width: 68px;
+  }
+  .slider-controls {
+    margin-top: 64px;
+    gap: 20px;
+  }
   .first-part {
     padding: 64px;
   }
@@ -315,6 +316,11 @@ background-color: transparent;
 }
 
 @media (min-width: 1440px) {
+  .scils {
+    width: auto;
+    height:auto;
+    margin-bottom: 223px;
+  }
   .swiper-slide.first,
   .swiper-slide.second,
   .swiper-slide.last {
@@ -324,6 +330,8 @@ background-color: transparent;
 
   .img-sumb {
     padding: 120px 37px;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 24px;
   }
   .first-part {
     padding: 64px 130px 64px 64px;
