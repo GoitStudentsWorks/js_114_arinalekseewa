@@ -98,7 +98,9 @@
   width: 100%;
   height: 100%;
 }
-
+.reviews-list {
+  display: flex;
+}
 .reviews-list-item {
   width: 100%;
 }
@@ -216,6 +218,7 @@
 
   .reviews-list-item.swiper-slide {
     max-width: 332px;
+    min-width: unset !important;
   }
 
   .swiper-button-prev-icon {
