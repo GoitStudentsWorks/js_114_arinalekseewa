@@ -14,7 +14,7 @@ items.forEach(item => {
   const arrow = item.querySelector('.icon-arrow-about-me');
   const title = item.querySelector('.about-me-title');
 
-  content.classList.add('about-me-content');
+ content.classList.add('about-me-content');
 
   item.classList.remove('open');
   content.style.maxHeight = '0px';
