@@ -22,6 +22,20 @@ items.forEach(item => {
   title.classList.remove('active');
   arrow.classList.remove('active');
 });
+  
+const firstItem = items[0];
+if (firstItem) {
+  const content = firstItem.querySelector('div:nth-of-type(2)');
+  const arrow = firstItem.querySelector('.icon-arrow-about-me');
+  const title = firstItem.querySelector('.about-me-title');
+
+  firstItem.classList.add('open');
+  content.style.maxHeight = content.scrollHeight + 'px';
+  title.classList.add('active');
+  arrow.classList.add('active');
+  arrow.style.transform = 'rotate(180deg)';
+}
+
 
     document.querySelectorAll('.about-me-icon').forEach(icon => {
     icon.addEventListener('click', function () {
