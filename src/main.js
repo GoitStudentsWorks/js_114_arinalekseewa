@@ -1,5 +1,5 @@
 import './js/header.js';
-import './js/about-me-2.js';
+import './js/about-me.js';
 import './js/projects.js';
 import './js/faq.js';
 import './js/covers.js';
