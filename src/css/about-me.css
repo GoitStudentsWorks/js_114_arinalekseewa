@@ -62,8 +62,7 @@
 }
 /* ========= */
 
-
-  @media screen  and (min-width: 768px) {
+@media screen  and (min-width: 768px) {
 
 .about-me-item {
     margin-bottom: 64px; /* збільшений відступ знизу */
