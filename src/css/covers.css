@@ -42,6 +42,7 @@
   height: 163px;
   display: flex;
   margin-bottom: 20px;
+   margin-left: -100px;
   will-change: transform;
   animation: scrollLeft 40s linear infinite;
   animation-play-state: paused;
@@ -128,9 +129,5 @@
   .covers-item:hover .covers-img {
     transform: scale(1.1);
     box-shadow: 0 0 5px rgba(106, 107, 107, 0.836);
-  }
-
-  .covers-list {
-    margin-left: -100px;
   }
 }
