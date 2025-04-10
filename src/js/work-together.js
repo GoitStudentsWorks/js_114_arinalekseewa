@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   AOS.init({
     duration: 300,
     easing: 'ease-out-cubic',
-    offset: 100,
+    offset: 0,
     once: false,
     mirror: true,
   });
