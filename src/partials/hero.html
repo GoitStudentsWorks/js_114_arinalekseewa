@@ -1,4 +1,18 @@
 <section class="hero-container">
+    <picture>
+        <source class="hero-img" srcset="im/mobile-hero@1x.webp 1x,
+                        img/mobile-hero@2x.webp 2x" media="(max-width: 767px)" />
+        <source srcset="img/tablet-hero@1x.webp 1x,
+                        img/tablet-hero@2x.webp 2x"
+            media="(min-width: 768px) and (max-width: 1439px)" />
+        <source srcset="img/desktop-hero@1x.webp 1x,
+                        img/desktop-hero@2x.webp 2x" media="(min-width: 1440px)" />
+        <img class="hero-img"
+            src="img/mobile-hero@1x.webp" 
+            alt="me" 
+            fetchpriority="high"
+            loading="lazy" />
+    </picture>
        <div class="hero-content container">
         <h1 class="hero-title"> Hello.<br>I'm fullstack developer<br>Lloyd Jefferson.</h1>
         <div class="hero-footer ">

@@ -4,6 +4,7 @@ header {
     width: 100%;
     background-color: transparent;
     padding-top: 32px;
+    z-index: 1;
 }
 
 .header-container {
