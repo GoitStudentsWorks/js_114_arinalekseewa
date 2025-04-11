@@ -309,68 +309,75 @@ section#about-me-2.section {
 /* ========= */
 
 @media screen and (min-width: 768px) {
-  .about-me-content {
-      align-items: flex-start;
-    }
-  
-    .about-me-item {
-      padding-bottom: 32px;
-      padding-top: 32px;
-    }
-  
-    .about-me-content {
-      gap: 16px;
-    }
-  
-    .swiper.about-me-swiper-container {
-      width: 600px;
-      height: 200px;
-    }
-  
-    .about-me-text {
-      font-size: 38px;
-      line-height: 1.05;
-      color: #fafafa;
-    }
-  
-    .icon-arrow {
-      border: 1px solid rgba(250, 250, 250, 0.2);
-      border-radius: 100px;
-      padding: 10px;
-      width: 40px;
-      height: 40px;
-    }
-  
-    .about-me-icon {
-      margin-bottom: 8px;
-    }
-  
-    /* Контейнер слайдера */
-    .about-me-swiper-container {
-      padding-right: 104px;
-    }
-  
-    .about-me-swiper {
-      width: 600px;
-    }
-  
-    .about-me-item-skils {
-      width: 200px;
-      height: 200px;
-    }
-  
-    .about-me-swiper-btn-nxt {
-      position: absolute;
-      right: 0;
-      transform: translateY(-50%);
-      cursor: pointer;
-      z-index: 10;
-      transform: rotate(180deg);
-      stroke: #3b3b3b;
-      fill: none;
-    }
 
-    .about-me-list-text.about-me-mg {
+  .icon-about-me-skills.swiper-button-next,
+  .icon-about-me-skills.swiper-button-disabled {
+    width: 40px;
+    height: 40px;
+  }
+
+  .about-me-content {
+    align-items: flex-start;
+  }
+
+  .about-me-item {
+    padding-bottom: 32px;
+    padding-top: 32px;
+  }
+
+  .about-me-content {
+    gap: 16px;
+  }
+
+  .swiper.about-me-swiper-container {
+    width: 600px;
+    height: 200px;
+  }
+
+  .about-me-text {
+    font-size: 38px;
+    line-height: 1.05;
+    color: #fafafa;
+  }
+
+  .icon-arrow {
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    border-radius: 100px;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .about-me-icon {
+    margin-bottom: 8px;
+  }
+
+  /* Контейнер слайдера */
+  .about-me-swiper-container {
+    padding-right: 104px;
+  }
+
+  .about-me-swiper {
+    width: 600px;
+  }
+
+  .about-me-item-skils {
+    width: 200px;
+    height: 200px;
+  }
+
+  .about-me-swiper-btn-nxt {
+    position: absolute;
+    right: 0;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 10;
+    transform: rotate(180deg);
+    stroke: #3b3b3b;
+    fill: none;
+  }
+
+  .about-me-list-text.about-me-mg {
     margin-bottom: 16px;
   }
 
@@ -405,81 +412,83 @@ section#about-me-2.section {
   .about-me-list-text {
     margin-bottom: 10px;
   }
+
   .skills-list {
-      padding: 0px 32px 0px 32px;
-    }
-  
-    .role.about-me-flex-div.about-me-content {
-      gap: 10px;
-    }
-  
-    .swiper.about-me-swiper-container {
-      width: 1200px;
-    }
-  
-    .about-me-text {
-      margin-bottom: 0;
-    }
-  
-    .about-me-text-wrap {
-      max-width: 465px;
-    }
-  
-    .about-me-text-wrap-first {
-      max-width: 369px;
-    }
-  
-    /* Контейнер слайдера */
-    .about-me-swiper-container {
-      padding-right: 144px;
-      margin-left: 32px;
-    }
-  
-    .about-me-swiper {
-      width: 1200px;
-    }
-  
-    .about-me-swiper-btn-nxt {
-      right: 64px;
-    }
-  
-    .container.about {
-      padding: 96px 32px 0px 32px;
-    }
-  
-    section#about-me-2.section {
-      padding-top: 96px;
-    }
-  
-    /* .about-me-content {
+    padding: 0px 32px 0px 32px;
+  }
+
+  .role.about-me-flex-div.about-me-content {
+    gap: 10px;
+  }
+
+  .swiper.about-me-swiper-container {
+    width: 1200px;
+  }
+
+  .about-me-text {
+    margin-bottom: 0;
+  }
+
+  .about-me-text-wrap {
+    max-width: 465px;
+  }
+
+  .about-me-text-wrap-first {
+    max-width: 369px;
+  }
+
+  /* Контейнер слайдера */
+  .about-me-swiper-container {
+    padding-right: 144px;
+    margin-left: 32px;
+  }
+
+  .about-me-swiper {
+    width: 1200px;
+  }
+
+  .about-me-swiper-btn-nxt {
+    right: 64px;
+  }
+
+  .container.about {
+    padding: 96px 32px 0px 32px;
+  }
+
+  section#about-me-2.section {
+    padding-top: 96px;
+  }
+
+  /* .about-me-content {
        flex-direction: column;
        gap: 16px;
        justify-content: center;
      } */
-  
-    .about-me-flex-div {
-      margin-left: auto;
-      max-width: 612px;
-      margin-right: 68px;
-    }
-  
-    .about-me-card {
-      width: 680px;
-      height: 700px;
-    }
-  
-    .about-me-description {
-      width: 552px;
-      height: 200px;
-      font-size: 38px;
-      line-height: 1.05263;
-      padding: 64px 64px 0 64px;
-    }
-  
-    .about-me-avatar {
-      width: 680px;
-      height: 700px;
-    }
+
+  .about-me-flex-div {
+    margin-left: auto;
+    max-width: 612px;
+    margin-right: 68px;
+  }
+
+  .about-me-card {
+    width: 680px;
+    height: 700px;
+  }
+
+  .about-me-description {
+    width: 552px;
+    height: 200px;
+    font-size: 38px;
+    line-height: 1.05263;
+    padding: 64px 64px 0 64px;
+  }
+
+  .about-me-avatar {
+    width: 680px;
+    height: 700px;
+  }
+
   .about-me-accordion {
     margin-bottom: 96px;
   }
@@ -505,4 +514,3 @@ section#about-me-2.section {
    gap: 32px;
    align-items: center;
  } */
-

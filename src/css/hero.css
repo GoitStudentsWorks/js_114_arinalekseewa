@@ -2,8 +2,7 @@
     padding-top: 280px;
     padding-bottom: 32px;
     background-image: url(../img/Hero_img/mobile-hero.webp);
-    background-size: contain;
-    background-position: left center;
+    background-size: cover;
     background-repeat: no-repeat;
 }
 @media screen and (min-resolution: 192dpi),
@@ -100,6 +99,7 @@ screen and (min-device-pixel-ratio: 2) {
 @media (min-width: 768px) {
     .hero-container {
         padding-top: 300px;
+        background-size: contain;
         background-image: url(../img/Hero_img/tablet-hero.webp);
         
     }
