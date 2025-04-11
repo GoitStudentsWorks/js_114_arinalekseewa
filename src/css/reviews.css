@@ -35,8 +35,6 @@
 .reviews-list-item-img {
   margin-bottom: 32px;
   border-radius: 10px;
-  width: 48px;
-  height: 48px;
   object-fit: cover;
 }
 
