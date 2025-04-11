@@ -26,7 +26,8 @@
   padding: 32px 24px;
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 20px;
-  min-height: 376px;
+  max-height: 302px;
+  min-height: 302px;
   display: flex;
   flex-direction: column;
 }
@@ -67,6 +68,7 @@
   line-height: 1.5;
   letter-spacing: -0.02em;
   color: rgba(250, 250, 250, 0.6);
+    overflow-y: auto;
 }
 
 .swiper-controll-buttons {

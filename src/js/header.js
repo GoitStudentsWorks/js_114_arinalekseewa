@@ -5,22 +5,12 @@ const closeModalBtn = document.querySelector(".mobile-close-btn");
 const modal = document.querySelector(".mobile-menu");
 const navLinks = document.querySelectorAll(".mobile-navigation-link");
 const orderBtn = document.querySelector(".order-nav-mobile");
+const navListLinks = document.querySelectorAll(".nav-list .nav-link");
 
 function toggleNav(event) {
     event.stopPropagation();
     nav.classList.toggle('is-open');
 }
-
-document.addEventListener('click', function(event) {
-    const isClickInsideNav = nav.contains(event.target);
-    const isClickOnButton = openNavBtn.contains(event.target);
-
-    if (!isClickInsideNav && !isClickOnButton) {
-        nav.classList.remove('is-open');
-    }
-});
-
-openNavBtn.addEventListener('click', toggleNav);
 
 function openModal() {
     modal.classList.add("is-open");
@@ -33,6 +23,17 @@ function closeModal() {
         document.body.classList.remove("no-scroll");
     }, 300);
 }
+
+document.addEventListener('click', function(event) {
+    const isClickInsideNav = nav.contains(event.target);
+    const isClickOnButton = openNavBtn.contains(event.target);
+
+    if (!isClickInsideNav && !isClickOnButton) {
+        nav.classList.remove('is-open');
+    }
+});
+
+openNavBtn.addEventListener('click', toggleNav);
 
 openModalBtn.addEventListener("click", openModal);
 closeModalBtn.addEventListener("click", closeModal);
@@ -56,4 +57,10 @@ navLinks.forEach(link => {
 
 orderBtn.addEventListener("click", () => {
     closeModal();
+});
+
+navListLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        nav.classList.remove("is-open");
+    });
 });
