@@ -14,7 +14,7 @@ const fetchReviews = () => {
 function createReviewLi(reviewData) {
   return `
     <li class="reviews-list-item swiper-slide">
-      <img src="${reviewData.avatar_url}" alt="${reviewData.author}" class="reviews-list-item-img" />
+      <img src="${reviewData.avatar_url}" alt="${reviewData.author}" class="reviews-list-item-img" width="48" height="48"/>
       <h3 class="reviews-list-item-author">${reviewData.author}</h3>
       <p class="reviews-list-item-text">${reviewData.review}</p>
     </li>
