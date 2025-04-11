@@ -1,24 +1,32 @@
 .hero-container {
-    padding-top: 280px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 281px;
     padding-bottom: 32px;
-    position: relative;
-    overflow: hidden;
-    z-index: 0;
+    background-image: url(../img/mobile-hero@1x.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 812px;
 }
 
-.hero-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
+@media screen and (min-resolution: 192dpi),
+screen and (min-resolution: 2dppx),
+screen and (min-device-pixel-ratio: 2) {
+    .hero-container {
+        background-image: url(../img/mobile-hero@2x.webp)
+    }
 }
 
 .hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     flex: 1;
     text-align: left;
+    align-items: flex-end;
+    justify-content: space-between;
 }
 
 .hero-title {
@@ -27,12 +35,11 @@
     line-height: 100%;
     letter-spacing: -0.03em;
     text-transform: uppercase;
-    margin-bottom: 212px;
 }
 
 .hero-footer {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     gap: 4px;
 }
@@ -56,7 +63,7 @@
     border-radius: 60px;
     width: 37px;
     height: 37px;
-    transform: all 0.3ms ease;
+    transform: border 0.3ms ease;
 }
 
 .social-item:hover,
@@ -87,50 +94,50 @@
 .email-link:focus,
 .email-link:hover a,
 .email-link:focus a {
-    border: 1px solid rgba(237, 59, 68, 0.5);
-        box-shadow: 0 0 10px rgba(237, 59, 68, 0.5), 0 0 20px rgba(237, 59, 68, 0.3);
-        color: #ffc5c5;
-        background-color: #1C1D20;
+    border: 1px solid #1C1D20;
+    box-shadow: 0 0 10px rgba(237, 59, 68, 0.5), 0 0 20px rgba(237, 59, 68, 0.3);
+    color: #ffc5c5;
+    background-color: #1C1D20;
 }
 
 @media (min-width: 375px) {
     .email-link {
         display: flex;
     }
-
-    .hero-footer {
-        justify-content: space-between;
-    }
 }
+
 /* Tablet (768px and up) */
 @media (min-width: 768px) {
     .hero-container {
         padding-top: 300px;
-        background-size: contain;
         background-image: url(../img/tablet-hero@1x.webp);
-        
+
     }
-@media screen and (min-resolution: 192dpi),
-            screen and (min-resolution: 2dppx),
-            screen and (min-device-pixel-ratio: 2) {
-                .hero-container {
-                    background-image: url(../img/tablet-hero@2x.webp);
-                }
-            }
+
+    section.hero-container.container {
+        padding-top: 300px;
+    }
+
+    @media screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx),
+    screen and (min-device-pixel-ratio: 2) {
+        .hero-container {
+            background-image: url(../img/tablet-hero@2x.webp);
+        }
+    }
 
     .hero-content {
         align-items: flex-end;
+        gap: 187px;
     }
 
     .hero-title {
         font-size: 90px;
-        margin-bottom: 188px;
     }
 
 
     .hero-footer {
         gap: 8px;
-        justify-content: flex-end;
     }
 
     .social-links {
@@ -156,28 +163,35 @@
 @media (min-width: 1440px) {
     .hero-container {
         background-image: url(../img/desktop-hero@1x.webp);
+        height: 900px;
     }
 
-        @media screen and (min-resolution: 192dpi),
-        screen and (min-resolution: 2dppx),
-        screen and (min-device-pixel-ratio: 2) {
-            .hero-container {
-                background-image: url(../img/desktop-hero@2x.webp);
-            }
+    @media screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx),
+    screen and (min-device-pixel-ratio: 2) {
+        .hero-container {
+            background-image: url(../img/desktop-hero@2x.webp);
         }
-
-    .hero-title {
-        text-align: left;
-        margin-bottom: 244px;
-        display: flex;
-        justify-content: center;
     }
 
     .hero-content {
+        gap: 243px;
+        align-items: center;
+    }
+
+    .hero-title {
+        text-align: left;
+    }
+
+
+    .hero-content {
+        justify-content: center;
         align-items: center;
     }
 
     .hero-footer {
         align-self: flex-end;
+        margin-right: 32px;
+        margin-bottom: 32px;
     }
 }
