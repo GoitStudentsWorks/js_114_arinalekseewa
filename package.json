@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/Portfolio-Jefferson/",
+    "build": "vite build --base=/js_114_arinalekseewa/",
     "preview": "vite preview"
   },
   "devDependencies": {
